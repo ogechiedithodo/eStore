@@ -8,6 +8,7 @@ import ProductCategory from "./pages/ProductCategory";
 import ProductDetails from "./pages/ProductDetails";
 import ShoppingCart from "./pages/ShoppingCart";
 import "./App.css";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const App = () => {
   return (
