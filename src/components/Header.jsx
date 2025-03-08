@@ -85,7 +85,7 @@ const Header = () => {
       </div>
       <section className="buttom-header">
         <div className="buttom-header-logo">
-          <img src="/public/logo.png.webp" alt="" />
+          <img src="/logo.png.webp" alt="" />
         </div>
         <article className="buttom-header-pages">
           <div className="home" onClick={() => Nav("/")}>
