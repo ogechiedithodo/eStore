@@ -4,7 +4,7 @@ import "../styles/Home.css";
 
 const Home = () => {
     return(
-        <div>
+        <div className="home-body">
         <Header />
         <div className='hero-1'>
          <div className='empty-div'>
@@ -19,6 +19,26 @@ const Home = () => {
             <button>Shop Now</button>
          </div>
       </div>
+
+      <div className="category">
+                <h2>Shop By Category</h2>
+                <aside>
+                    <div className="category-img1">
+                      <div>
+
+                      </div>
+                      <div>
+                        
+                      </div>
+                    </div>
+                    <div className="category-img2">
+
+                    </div>
+                    <div className="category-img3">
+
+                    </div>
+                </aside>
+         </div>
         </div>
       
         
