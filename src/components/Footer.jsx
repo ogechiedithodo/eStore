@@ -1,8 +1,8 @@
 import React from 'react'
 import "../styles/footer.css"
 import { CiHeart } from "react-icons/ci";
-import { FaFacebookF } from "react-icons/fa6";
-import { ImTwitter } from "react-icons/im";
+import { TiSocialFacebook } from "react-icons/ti";
+import { TiSocialTwitter } from "react-icons/ti";
 
 const Footer = () => {
   return (
@@ -60,8 +60,8 @@ const Footer = () => {
               </p>
           </nav>
           <nav className='buttomIcon'>
-            <span><ImTwitter className='bottomIconMain'/></span>
-            <span><FaFacebookF className='bottomIconMain'/></span>
+            <span><TiSocialTwitter className='bottomIconMain'/></span>
+            <span><TiSocialFacebook className='bottomIconMain'  /></span>
             <span>3</span>
             <span>4</span>
           </nav>

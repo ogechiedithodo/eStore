@@ -5,18 +5,3 @@
     flex-direction: column;
 }
 
-.cartLandingPage{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-.imgDiv{
-    width: 100%;
-    height: 60%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
-}
