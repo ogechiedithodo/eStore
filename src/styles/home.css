@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.home-body{
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+}
+.hero-1{
+    width: 100%;
+    height: 47vw;
+    background: url(../../public/hero_man.png),url(../../public/h1_hero.jpeg) ;
+    background-position: 80px 40px, 0 0;
+    background-repeat: no-repeat;
+    background-size: 47%, auto;
+    display: flex;
+    margin: 0 0 30px 0;
+    
+}
+.empty-div{
+    width: 50%;
+    height: 100%;
+}
+.her0-1-write-up{
+    width: 50%;
+    height: 90%;
+    display: flex;
+    padding: 13% 9%;
+    flex-direction: column;
+    gap: 50px;
+}
+.her0-1-write-up h1{
+    font-family: "Yellowtail", cursive;
+    font-weight: 400;
+    color: #2577FD;
+    font-size: 40px;
+    font-style: normal;
+}
+.her0-1-write-up h2{
+    font-size: 100px;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight:700;
+    font-style: normal;
+}
+.her0-1-write-up p{
+    font-size: 20px;
+    color: #000000;
+    font-family: "Playfair Display",sans-serif;
+}
+.her0-1-write-up button{
+    width: 150px;
+    height: 50px;
+    background-color: #2577FD;
+    color: #ffffff;
+    border: none;
+    padding: 10px 8px;
+    border-radius: 20px;
+    font-size: 20px;
+    font-family: poppins;
+    cursor: pointer;
+}
+.her0-1-write-up button:hover{
+    background-color: #3fa4fd;
+    transition: ease-in-out 3s to right;
+
+}
+.category{
+    width: 100%;
+    height: 42vh;
+    background-color: #ffffff;
+}
+.category h2{
+    font-size: 38px;
+    font-family: "Playfair Display",sans-serif;
+    text-align: center;
+}
+.category aside{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    height: 50vh;
+    /* border: 2px solid green; */
+}
+.category aside div{
+    width: 35%;
+    height: 100%;
+    display: flex;
+    /* border: 2px solid red; */
+}
+.category-img1{
+    background: url(../../public/cat1.png);
+    background-size: 95%;
+    background-position: 0 30px;
+    background-repeat: no-repeat;
+}
+.category-img1 > div{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    
+   
+}
+.category-img1 > p:nth-child(1){
+    font-size: 30px;
+    font-family: "Playfair Display",sans-serif;
+    color: #000000;
+    font-weight: 700;
+    margin: 10px 0;
+}
+.category-img2{
+    background: url(../../public/cat2.jpeg);
+    background-size: 95%;
+    background-position: 0 30px;
+    background-repeat: no-repeat;
+}
+.category-img3{
+    background: url(../../cat3.jpeg);
+    background-size: 95%;
+    background-position: 0 30px;
+    background-repeat: no-repeat;
+}
