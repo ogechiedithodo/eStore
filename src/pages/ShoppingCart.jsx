@@ -6,7 +6,7 @@ import Footer from '../components/Footer'
 const ShoppingCart = () => {
   return (
     <div className='mainShoppingCart'>
-      <CartLandingPage />
+      
       <Footer />
     </div>
   )
