@@ -1,6 +1,13 @@
+import React from 'react'
+
+import Footer from '../components/Footer'
+
 const ShoppingCart = () => {
-    return(
-        <div>ShoppingCart</div>
-    )
-    };
-    export default ShoppingCart;
+  return (
+    <div className='mainShoppingCart'>
+      <Footer />
+    </div>
+  )
+}
+
+export default ShoppingCart

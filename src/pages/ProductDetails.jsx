@@ -1,5 +1,6 @@
 import Header from "../components/Header";
 import "../styles/productdetails.css";
+import Footer from "../components/Footer";
 const ProductDetails = () => {
   return (
     <div className="product-details-body">
@@ -65,7 +66,7 @@ const ProductDetails = () => {
             <h1> Get promotions & updates!</h1>
             <br />
             <p>
-              {" "}
+              
               Seamlessly empower fully researched growth strategies and
               interoperable internal or <br />
               “organic” sources credibly innovate granular internal .{" "}
@@ -77,6 +78,8 @@ const ProductDetails = () => {
           </div>
         </div>
       </section>
+
+      <Footer/>
     </div>
   );
 };
