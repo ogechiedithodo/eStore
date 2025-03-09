@@ -1,0 +1,107 @@
+.footer{
+    width: 100%;
+    height: 80vh;
+    /* background-color: black; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* gap: 15px; */
+}
+
+.topFooter{
+    width: 90%;
+    height: 75%;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding-top: 10px;
+}
+
+.writeUpBox{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 20px;
+    gap: 30px;
+    /* background-color: red; */
+
+    & section{
+        width: 100%;
+        height: 20%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        /* align-items: center;
+        justify-content: center; */
+        gap: 10px;
+        /* background-color: yellow; */
+    }
+
+    & article{
+        width: 100%;
+        height:80%;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        /* align-items: center; */
+        color: gray;
+        font-family: Arial, Helvetica, sans-serif;
+        /* padding: 10px; */
+        /* background-color: green; */
+        font-size: 20px;
+       
+    }
+}
+
+.buttomFooter{
+    width: 90%;
+    height: 20%;
+    display: flex;
+    /* background-color: red; */
+    justify-content: space-between;
+    gap: 10PX;
+    /* align-items: center; */  
+}
+
+.wrteupButtom{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    /* background-color: aqua; */
+    font-size: 20px;
+
+}
+
+.buttomIcon{
+    width: 27%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 7px;
+
+    & span{
+        font-size: 20px;
+        /* color: gray; */
+        /* background-color: tomato; */
+    }
+}
+
+.bottomIconMain{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 7px;
+    color: black;
+    cursor: pointer;
+    transition: all 1s ease-in-out;
+}
+
+.bottomIconMain:hover{
+    color: #4277b7;
+}
