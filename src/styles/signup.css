@@ -1,0 +1,107 @@
+.signup-container{
+    width: 100%;
+    height: fit-content;
+   
+}
+.signup-form-card{
+    width: 100%;
+    height:30vh;
+    display: flex;
+    margin-bottom: 100px;
+    background: url(../../public/category.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    font-family: "Playfair Display",sans-serif;
+    align-items: center;
+}
+.sign-holder{
+    width: 100%;
+    height: 80vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.sign-up{
+    width: 65%;
+    
+    height: 100%;
+    display: flex;
+    gap: 20px;
+   
+}
+.sign-up > div{
+    width: 50%;
+    height: 100%;
+
+    
+    
+}
+.sign-up > div:nth-of-type(1){
+    display: flex;
+    text-align: center;
+    color: #ffff;
+    padding: 0 70px;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    background: linear-gradient(to bottom right, #AA88A7, #644762);
+    align-items: center;
+}
+.sign-up > div:nth-of-type(1) p{
+    font-family: "Poppins",sans-serif;
+    font-size: 15px;
+}
+.sign-up > div:nth-of-type(1) p:nth-of-type(2){
+    font-size: 14px;
+    padding: 15px 20px;
+    border: 1.5px solid #ffff;
+    border-radius: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.sign-up > div:nth-of-type(1) p:nth-of-type(2):hover{
+    background-color: #ffff;
+    color:#2577FD;
+}
+.sign-up > div:nth-of-type(1) h3{
+    font-family: "Playfair Display", serif;
+    font-size: 24px;
+}
+.sign-up > div:nth-of-type(2){
+    display: flex;
+    padding: 80px 70px;
+    flex-direction: column;
+    gap: 20px;
+
+}
+.sign-up > div:nth-of-type(2) h2{
+    font-size: 25px;
+    text-align: left;
+    font-family: "Playfair Display", serif;
+}
+.sign-up > div:nth-of-type(2) aside{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.sign-up > div:nth-of-type(2) aside input{
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 8px 10px;
+    border-bottom: 0.5px solid grey;
+}
+.sign-up > div:nth-of-type(2) button{
+    width: 100%;
+    padding: 10px 15px;
+    background-color: #2577FD;
+    border: none;
+    outline: none;
+    color: white;
+    font-family: "Poppins",sans-serif;
+}
