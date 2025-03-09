@@ -12,8 +12,7 @@ import { GoHeart } from "react-icons/go";
 import { IoCart } from "react-icons/io5";
 
 const Header = () => {
-
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   return (
     <div className="HeaderBody">
@@ -121,7 +120,7 @@ const Header = () => {
             </div>
           </div>
           <div className="signin">
-            <div className="btn" onClick={() => navigate("/login")} >
+            <div className="btn" onClick={() => navigate("/login")}>
               <p>Sign In</p>
             </div>
           </div>
