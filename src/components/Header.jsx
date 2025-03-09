@@ -82,7 +82,7 @@ const Header = () => {
 
       <section className="buttom-header">
         <div className="buttom-header-logo">
-          <img src="/public/logo.png.webp" alt="Logo" />
+          <img src="/logo.png.webp" alt="Logo" />
         </div>
         <article className="buttom-header-pages">
           <NavLink to="/" className="home">
