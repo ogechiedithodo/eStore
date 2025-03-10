@@ -22,8 +22,7 @@ const Header = () => {
             <img src="/logo.png" alt="Logo" />
           </div>
           <div className="estore">
-            <span>+</span>
-            <h2>ESTORE</h2>
+            
           </div>
         </div>
         <div className="top-header-right">

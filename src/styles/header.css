@@ -3,6 +3,10 @@
   height: 35vh;
   display: flex;
   flex-direction: column;
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Ensures it stays on top */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 .top-header {
   width: 100%;
@@ -51,7 +55,7 @@
     width: 60%;
   }
 }
-.estore {
+.estorea {
   width: 50%;
   height: 100%;
   display: flex;
