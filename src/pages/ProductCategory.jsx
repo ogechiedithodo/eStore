@@ -2,6 +2,7 @@ import Header from "../components/Header";
 import "../styles/productcategory.css";
 import Footer from "../components/Footer";
 import { RiArrowDropDownLine } from "react-icons/ri";
+import { configs } from "eslint-plugin-react-refresh";
 
 const ProductCategory = () => {
   const productData = [
@@ -36,6 +37,20 @@ const ProductCategory = () => {
       Price: "$40",
     },
   ];
+  const data = [
+    {img: "/cubeimg.png",
+      title: "Free Shipping Method",
+      content: "aorem ixpsacdolor sit ameasecur adipisicing elitsf edasd."
+    },
+    {img: "/cubeimg.png",
+      title: "Free Shipping Method",
+      content: "aorem ixpsacdolor sit ameasecur adipisicing elitsf edasd."
+    },
+    {img: "/cubeimg.png",
+      title: "Free Shipping Method",
+      content: "aorem ixpsacdolor sit ameasecur adipisicing elitsf edasd."
+    },
+  ]
   return (
     <div className="product-category-body">
       <Header />
