@@ -46,7 +46,7 @@ const Footer = () => {
                   <span>Terms and Codition</span>
                   <span>Privacy Policy</span>
                   <span>Privacy Policy</span>
-                  <span>Report a Payment issus</span>
+                  <span>Report a Payment issue</span>
                 </article>
             </div>
        </article>

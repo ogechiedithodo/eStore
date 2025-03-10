@@ -1,7 +1,10 @@
 import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import "../styles/Home.css";
+import { BsFillBoxSeamFill } from "react-icons/bs";
+import { TfiReload } from "react-icons/tfi";
+import { CiUnlock } from "react-icons/ci";
+import "../styles/home.css";
 
 const Home = () => {
     return(
@@ -62,7 +65,7 @@ const Home = () => {
 
          </div>
          <div className="hero-2">
-            <img src="public/card-man.png" alt="" width={150} />
+            <img src="/card-man.png" alt="" width={150} />
             <div className="hero-2-empty">
 
             </div>
@@ -83,22 +86,22 @@ const Home = () => {
                <div className="hero-complex-second-born-1">
                   <div>
                     <p>Menz Winter Jacket</p>
-                    <img src="public/collection3.png" alt="" width={70}/>
+                    <img src="/collection3.png" alt="" width={70}/>
                   </div>
                   <div>
                      <p>Menz Winter Jacket</p>
-                     <img src="public/collection4.png" alt=""  width={70}/>
+                     <img src="/collection4.png" alt=""  width={70}/>
                   </div>
                   <div>
                     <p>Menz Winter Jacket</p>
-                    <img src="public/collection5.png" alt=""  width={70}/>
+                    <img src="/collection5.png" alt=""  width={70}/>
                   </div>
                </div>
            </div>
          </div>
          <div className="hero-3">
             <div className="hero-3-img" style={{display: 'flex', flexDirection: 'row'}} >
-              <img src="public/latest-man.png" alt="" width={350}/>
+              <img src="/latest-man.png" alt="" width={350}/>
               <div className="hero-3-write-up" >
                <h1>Get Our Latest Offers News</h1>
                <p>Subscribe to our Newsletter</p>
@@ -107,6 +110,30 @@ const Home = () => {
             <div>
 
             </div>
+         </div>
+         <div className="home-service">
+            <aside>
+              <BsFillBoxSeamFill size={30} />
+              <h3>Free Shopping Method</h3>
+              <p>aorem ixpsacdolor sit ameasecur adipisicing elitsf edasd.</p>
+            </aside>
+            <aside>
+              <CiUnlock size={30}/>
+              <h3>Secure Payment System</h3>
+              <p>aorem ixpsacdolor sit ameasecur adipisicing elitsf edasd.</p>
+            </aside>
+            <aside>
+              <TfiReload size={30}/>
+               <h3>Secure Payment System</h3>
+               <p>aorem ixpsacdolor sit ameasecur adipisicing elitsf edasd.</p>
+            </aside>
+         </div>
+         <div className="home-gallary">
+            <img src="/gallery1.png" alt="" />
+            <img src="/gallery2.png" alt="" />
+            <img src="/gallery3.png" alt="" />
+            <img src="/gallery4.png" alt="" />
+            <img src="/gallery5.jpg" alt="" />
          </div>
          <Footer />
         </div>

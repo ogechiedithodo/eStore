@@ -12,8 +12,7 @@ import { GoHeart } from "react-icons/go";
 import { IoCart } from "react-icons/io5";
 
 const Header = () => {
-
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   return (
     <div className="HeaderBody">
@@ -81,7 +80,7 @@ const Header = () => {
 
       <section className="buttom-header">
         <div className="buttom-header-logo">
-          <img src="/logo.png.webp" alt="Logo" />
+          <img src="/logo.png.webp" alt="" />
         </div>
         <article className="buttom-header-pages">
           <NavLink to="/" className="home">
@@ -120,7 +119,7 @@ const Header = () => {
             </div>
           </div>
           <div className="signin">
-            <div className="btn" onClick={() => navigate("/login")} >
+            <div className="btn" onClick={() => navigate("/login")}>
               <p>Sign In</p>
             </div>
           </div>
