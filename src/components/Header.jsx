@@ -64,13 +64,13 @@ const Header = () => {
           <NavLink to="/login" className="right-header-text">
             <p>My Account</p>
           </NavLink>
-          <NavLink to="/wishlist" className="right-header-text">
+          <NavLink to="/productcategory" className="right-header-text">
             <p>Wish List</p>
           </NavLink>
-          <NavLink to="/shopping" className="right-header-text">
+          <NavLink to="/shoppingcart" className="right-header-text">
             <p>Shopping</p>
           </NavLink>
-          <NavLink to="/cart" className="right-header-text">
+          <NavLink to="/shoppingcart" className="right-header-text">
             <p>Cart</p>
           </NavLink>
           <NavLink to="/checkout" className="right-header-text">
