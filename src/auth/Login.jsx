@@ -1,7 +1,11 @@
 import Header from "../components/Header";
 import "../styles/login.css";
+import { useNavigate } from "react-router-dom";
+
 import Footer from "../components/Footer";
 const Login = () => {
+  const navigate = useNavigate(); 
+
   return (
     <div className="loginBody">
       <Header />
@@ -24,7 +28,7 @@ const Login = () => {
                 </p>
               </div>
               <div className="button">
-                <span> CREATE AN ACCOUNT</span>
+                <span onClick={()=>navigate("/signup")}> CREATE AN ACCOUNT</span>
               </div>
             </div>
           </div>
