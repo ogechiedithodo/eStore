@@ -1,5 +1,6 @@
 import Header from "../components/Header";
 import "../styles/login.css";
+import Footer from "../components/Footer";
 const Login = () => {
   return (
     <div className="loginBody">
@@ -15,11 +16,11 @@ const Login = () => {
                 <h2> New to our Shop?</h2>
                 <br />
                 <p>
-                  {" "}
+                
                   There are advances being made in science and
                   <br />
                   technology everyday, and a good example of this is
-                  <br /> the{" "}
+                  <br /> the
                 </p>
               </div>
               <div className="button">
@@ -55,6 +56,7 @@ const Login = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };

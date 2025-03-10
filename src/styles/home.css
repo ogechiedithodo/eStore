@@ -391,3 +391,44 @@
     color: #000000;
     text-align: left;
 }
+.home-service{
+    width: 80%;
+    height: 40vh;
+    display: flex;
+    justify-content: space-between;
+    margin: 5% auto;
+}
+.home-service aside{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.home-service aside h3{
+   font-size: 20px;
+   font-family: "popins",sans-serif;
+   font-weight: 600;
+}
+.home-service aside p{
+    font-size: 16px;
+    font-family: "popins",sans-serif;
+    font-weight: 500;
+    color: #6B7A88;
+}
+.home-gallary{
+    max-width: 90%;
+    width: 90%;
+    margin: 5% auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    
+}
+.home-gallary img{
+    width: 258px;
+    height: 247px;
+    object-fit: cover;
+    border-radius: 10px;
+}
