@@ -1,0 +1,393 @@
+
+.home-body{
+    width: 100%; 
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+.hero-1{
+    width: 100%;
+    height: 47vw;
+    background: url(../../public/hero_man.png),url(../../public/h1_hero.jpeg) ;
+    background-position: 80px 40px, 0 0;
+    background-repeat: no-repeat;
+    background-size: 47%, auto;
+    display: flex;
+    margin: 0 0 30px 0;
+    
+}
+.empty-div{
+    width: 50%;
+    height: 100%;
+}
+.her0-1-write-up{
+    width: 50%;
+    height: 90%;
+    display: flex;
+    padding: 13% 9%;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+}
+.her0-1-write-up h1{
+    font-family: "Yellowtail", cursive;
+    font-weight: 400;
+    color: #2577FD;
+    font-size: 40px;
+    font-style: normal;
+}
+.her0-1-write-up h2{
+    font-size: 100px;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight:700;
+    font-style: normal;
+}
+.her0-1-write-up p{
+    font-size: 20px;
+    color: #000000;
+    font-family: "Playfair Display",sans-serif;
+}
+.her0-1-write-up button{
+    width: 150px;
+    height: 50px;
+    background-color: #2577FD;
+    color: #ffffff;
+    border: none;
+    padding: 10px 8px;
+    border-radius: 20px;
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+}
+.her0-1-write-up button:hover{
+    background-color: #3fa4fd;
+    transition: background-color 0.3s ease-in-out;
+
+
+}
+.category{
+    width: 100%;
+    height: 50vh;
+    margin-bottom: 30vh;
+    background-color: #ffffff;
+}
+.category h2{
+    font-size: 38px;
+    font-family: "Playfair Display",sans-serif;
+    text-align: center;
+}
+.category aside{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    height: 50vh;
+    /* border: 2px solid green; */
+}
+.category aside div{
+    width: 35%;
+    height: 100%;
+    display: flex;
+    /* border: 2px solid red; */
+}
+.category-img1{
+    background: url(../../public/cat1.png);
+    background-size: 95%;
+    display: flex;
+    justify-content: flex-end;
+    background-position: 0 30px;
+    background-repeat: no-repeat;
+  
+    
+}
+.category-img1-space{
+    width: 74% !important;
+    height: 100% !important;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px; 
+    text-align: center;
+    justify-content: center;
+
+}
+.category-img1-space h2{
+    font-family: "Playfair Display",sans-serif;
+    font-size: 30px;
+    color: #000000;
+    font-weight: 700;
+}
+.category-img1-space p{
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    font-style: normal;
+    padding: 8px 10px;
+    border-radius: 20px;
+    width: 60%;
+    margin: 0 auto;
+    background-color: #FFCE25;
+}
+.category-img1-space h3{
+    font-size: 25px;
+    font-family: "Yellowtail", cursive;
+    font-weight: 600;
+    color: #2577FD;
+    
+
+}
+.category-img2{
+    background: url(../../public/cat2.jpeg);
+    background-size: 95%;
+    background-position: 0 30px;
+    display: flex;
+    justify-content: flex-end;
+    background-repeat: no-repeat;
+}
+.category-img3{
+    background: url(../../cat3.jpeg);
+    background-size: 95%;
+    display: flex;
+    justify-content: flex-end ;
+    background-position: 0 30px;
+    background-repeat: no-repeat;
+}
+.category-img2-text{
+    width: 74% !important;
+    height: 95% !important;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px; 
+    justify-content: center;
+    text-align: center;
+
+
+}
+.category-img2-text h2{
+    font-family: "Playfair Display",sans-serif;
+    font-size: 30px;
+    color: #000000;
+    font-weight: 700;
+}
+.category-img2-text h3{
+    font-size: 25px;
+    font-family: "Yellowtail", cursive;
+    font-weight: 600;
+    color: #2577FD;
+}
+.category-img2-text p{
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    font-style: normal;
+    width: 60%;
+    margin: 0 auto;
+    
+}
+.home-product{
+    width: 100%;
+    height: 100vh;
+    background-color: #ffffff;
+    margin-bottom: 40px;
+}
+.home-product-header{
+    width: 70%;
+    height: 10%;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.home-product-header h1{
+    font-size: 40px;
+    font-family: "Playfair Display",sans-serif;
+    font-weight: 700;
+    color: #000000;
+}
+.home-product-header aside:nth-of-type(2) {
+    display: flex;
+    gap: 20px;
+    font-size: 14px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    color: #8F9DC2;
+}
+.home-product-header aside:nth-of-type(2) p{
+    cursor: pointer;
+}
+.hero-2 {
+    width: 90%;
+    margin: 0 auto 5% auto;
+    height: 60vh;
+    background: url(../../public/card-shape.png), url(../../public/card.png);
+    background-size: 10%, 100%;
+    background-position: 95% 80%, 0 0;
+    background-repeat: no-repeat;
+    display: flex;
+    position: relative;
+}
+
+.hero-2 img {
+    position: absolute;
+    top: -20%;
+    left: 23%;
+}
+
+.hero-2-empty {
+    width: 40%;
+    height: 100%;
+}
+
+.hero-2-write-up {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.625rem;
+}
+
+.hero-2-write-up h1 {
+    font-size: 3.125rem;
+    font-family: "Playfair Display", sans-serif;
+    font-weight: 700;
+    color: #000000;
+}
+
+.hero-2-write-up p:nth-of-type(1) {
+    font-size: 1.25rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    color: #373b41;
+}
+
+.hero-2-write-up p:nth-of-type(2) {
+    font-size: 1.125rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    margin-top: 5%;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 0.625rem 0.9375rem;
+    text-align: center;
+    width: 25%;
+    border-radius: 1.25rem;
+}
+.hero-complex {
+    width: 75%;
+    margin: 0 auto;
+    height: 65vh;
+    background-image:url(../../public/collection2.png) ,url(../../public/collection1.png);
+    background-size: contain, 22%;
+    background-position: 50% 50%, 5% 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-between;
+}
+.hero-complex > div{
+    width: 30%;
+    height: 100%;
+
+}
+.hero-complex > div:nth-of-type(1){
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 20px;
+}
+.hero-complex > div:nth-of-type(1) h1{
+    font-size: 35px;
+    font-family: "Playfair Display",sans-serif;
+    font-weight: 700;
+    color: #000000;
+}
+.hero-complex > div:nth-of-type(1) p:nth-of-type(1){
+    font-size: 16px;
+    font-family: "Poppins",sans-serif;
+    font-weight: 500;
+    color: #373b41;
+}
+.hero-complex > div:nth-of-type(1) p:nth-of-type(2){
+    font-size: 14px;
+    font-family: "Poppins",sans-serif;
+    font-weight: 500;
+    width: 52%;
+    color: #ffff;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-align: center;
+    background: #2577FD;
+}
+.hero-complex > div:nth-of-type(1) p:nth-of-type(2):hover{
+    background: #3fa4fd;
+    transition: background 0.3s ease-in-out;
+}
+.hero-complex-second-born{
+    display: flex;
+    padding-top: 10%;
+    justify-content: left;
+ 
+}
+.hero-complex-second-born-1{
+    width: 70%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* border: 2px solid red; */
+}
+.hero-complex-second-born-1 > div{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.hero-complex-second-born-1 > div > p{
+    width: 52%;
+    display: flex;
+    font-family: "Poppins",sans-serif;
+   text-align: right;
+   font-weight: 550;
+}
+.hero-complex-second-born-1 > div:nth-of-type(2) > p{
+    background-color: #2577FD;
+    color: #ffffff;
+    padding: 10px 7px;
+    border-radius: 10%;
+}
+.hero-3{
+    width: 90%;
+    height: 47vh;
+    margin: 10% auto;
+    background: url(../../public/latest-offer.png) ;
+    background-size:  100%;
+    background-position:  0 0;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero-3 > div{
+    width: 50%;
+    height: 100%;
+    display: flex ;
+    flex-direction: column;
+
+}
+.hero-3-write-up{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    border: 2px solid blue;
+}
+.hero-3-write-up h1{
+    font-size: 35px;
+    font-family: "Playfair Display",sans-serif;
+    font-weight: 700;
+    color: #000000;
+    text-align: left;
+}

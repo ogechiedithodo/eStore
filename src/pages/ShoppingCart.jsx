@@ -1,5 +1,7 @@
 import React from 'react'
+
 import "../styles/shoppingcart.css"
+
 import Footer from '../components/Footer'
 import { IoMdArrowDropdown } from "react-icons/io";
 import { RiArrowDropDownLine } from "react-icons/ri";
@@ -8,6 +10,7 @@ import { RiArrowDropDownLine } from "react-icons/ri";
 const ShoppingCart = () => {
   return (
     <div className='mainShoppingCart'>
+
       <div className='landingPage'>
         <section className='imgDiv'>
           <div>
