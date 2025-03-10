@@ -149,6 +149,7 @@ const ShoppingCart = () => {
           <span></span>
         </div> */}
 
+
       <Footer />
     </div>
   )
