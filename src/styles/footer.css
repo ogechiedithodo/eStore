@@ -55,6 +55,17 @@
     }
 }
 
+.textHover{
+    color: gray;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+.textHover:hover{
+    color: #4277b7;
+    transform: scale(1.0) translateX(11px);   
+}
+
 .buttomFooter{
     width: 90%;
     height: 20%;
@@ -72,6 +83,7 @@
     align-items: center;
     /* background-color: aqua; */
     font-size: 20px;
+    font-family: sans-serif;
 
 }
 
