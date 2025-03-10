@@ -3,6 +3,8 @@ import "../styles/footer.css"
 import { CiHeart } from "react-icons/ci";
 import { TiSocialFacebook } from "react-icons/ti";
 import { TiSocialTwitter } from "react-icons/ti";
+import { HiGlobeAlt } from "react-icons/hi2";
+import { AiOutlineBehance } from "react-icons/ai";
 
 const Footer = () => {
   return (
@@ -22,31 +24,31 @@ const Footer = () => {
             <div className='writeUpBox'>
                 <section><h1 style={{color:"black",  fontFamily: "sans-serif"}}>Quick Link</h1></section>
                 <article>
-                  <span>About</span>
-                  <span>offers & Discount</span>
-                  <span>Get Cuppon</span>
-                  <span>Contact us</span>
+                  <span className='textHover'>About</span>
+                  <span className='textHover'>offers & Discount</span>
+                  <span className='textHover'>Get Cuppon</span>
+                  <span className='textHover'>Contact us</span>
                 </article>
             </div>
            
             <div className='writeUpBox'>
             <section><h1 style={{color:"black",  fontFamily: "sans-serif"}}>New Product</h1></section>
                 <article>
-                  <span>Women Cloth</span>
-                  <span>Fashion Assesories</span>
-                  <span>Man Assesories</span>
-                  <span>Rubber Made Toy</span>
+                  <span className='textHover'>Women Cloth</span>
+                  <span className='textHover'>Fashion Assesories</span>
+                  <span className='textHover'>Man Assesories</span>
+                  <span className='textHover'>Rubber Made Toy</span>
                 </article>
             </div>
            
             <div className='writeUpBox' style={{width: '30%', height:"100%", paddingLeft:"30px"}}>
             <section><h1 style={{color:"black",  fontFamily: "sans-serif"}}>Support</h1></section>
                 <article>
-                  <span>Frequetly asking question</span>
-                  <span>Terms and Codition</span>
-                  <span>Privacy Policy</span>
-                  <span>Privacy Policy</span>
-                  <span>Report a Payment issue</span>
+                  <span className='textHover'>Frequetly asking question</span>
+                  <span className='textHover'>Terms and Codition</span>
+                  <span className='textHover'>Privacy Policy</span>
+                  <span className='textHover'>Privacy Policy</span>
+                  <span className='textHover'>Report a Payment issue</span>
                 </article>
             </div>
        </article>
@@ -62,8 +64,8 @@ const Footer = () => {
           <nav className='buttomIcon'>
             <span><TiSocialTwitter className='bottomIconMain'/></span>
             <span><TiSocialFacebook className='bottomIconMain'  /></span>
-            <span>3</span>
-            <span>4</span>
+            <span><AiOutlineBehance className='bottomIconMain'/></span>
+            <span><HiGlobeAlt className='bottomIconMain'/></span>
           </nav>
        </article>
     </div>
