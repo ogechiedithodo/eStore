@@ -1,7 +1,6 @@
 .home-product-items-container{
     width: 100%;
     height: 100%;
-    border: 2px solid blue;
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -13,5 +12,28 @@
 .home-product-items{
     width: 30%;
     height: 50%;
-    border: 2px solid green;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
 }
+.home-product-items-stars{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+.home-product-items-stars:first-child{
+    color: red;
+}
+.home-product-items-price{
+    width: 40%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+.home-product-items-price > span:nth-of-type(2){
+    color: red;
+}
+
+  

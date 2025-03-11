@@ -56,15 +56,15 @@ const Home = () => {
           <aside>
             <h1>Latest Product</h1>
           </aside>
-          <aside>
-            <p onClick={() => setActiveTab("All")}>All</p>
-            <p onClick={() => setActiveTab("New")}>New</p>
-            <p onClick={() => setActiveTab("Featured")}>Featured</p>
-            <p onClick={() => setActiveTab("Offer")}>Offer</p>
+          <aside className="home-product-header-aside">
+            <p className={activeTab === "All" ? "active-tab" : "" } onClick={() => setActiveTab("All")}>All</p>
+            <p className={activeTab === "New" ? "active-tab" : "" } onClick={() => setActiveTab("New")}>New</p>
+            <p className={activeTab === "Featured" ? "active-tab" : "" } onClick={() => setActiveTab("Featured")}>Featured</p>
+            <p className={activeTab === "Offer" ? "active-tab" : "" } onClick={() => setActiveTab("Offer")}>Offer</p>
           </aside>
         </section>
         <section className="home-product-body">
-          {activeTab === "All" && <All/>}
+          {activeTab === "All" && <All/> }
           {activeTab === "New" && <New/>}
           {activeTab === "Featured" && <Featured/>}
           {activeTab === "Offer" && <Offer/>}
@@ -103,17 +103,19 @@ const Home = () => {
         </div>
       </div>
       <div className="hero-3">
-        <div
-          className="hero-3-img"
-          style={{ display: "flex", flexDirection: "row" }}
-        >
+        <div className="hero-3-img" style={{ display: "flex", flexDirection: "row" }} >
           <div className="hero-3-write-up">
-            <img src="/latest-man.png" alt="" width={450} />
-            <h1>Get Our Latest Offers News</h1>
+            <h1>Get Our <br />
+             Latest Offers News</h1>
             <p>Subscribe to our Newsletter</p>
           </div>
         </div>
-        <div>jrfssvskjhks</div>
+        <div className="hero-3-input-container">
+           <div className="hero-3-input">
+           <input type="text" placeholder="Your email here"/>
+           <button>Shop Now</button>
+           </div>
+        </div>
       </div>
       <Footer />
     </div>
