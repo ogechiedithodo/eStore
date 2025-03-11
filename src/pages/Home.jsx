@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 import { BsFillBoxSeamFill } from "react-icons/bs";
 import { TfiReload } from "react-icons/tfi";
 import { CiUnlock } from "react-icons/ci";
-import "../styles/home.css";
+import "../styles/home.css"
 
 const Home = () => {
     return(
