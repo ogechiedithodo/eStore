@@ -71,7 +71,7 @@ const Home = () => {
         </section>
       </div>
       <div className="hero-2">
-        <img src="/card-man.png" alt="" width={150} />
+        <img src="https://preview.colorlib.com/theme/estore/assets/img/categori/card-man.png" alt="" width={150} />
         <div className="hero-2-empty"></div>
         <div className="hero-2-write-up">
           <h1>Find The Best Product from Our Shop</h1>
@@ -89,15 +89,15 @@ const Home = () => {
           <div className="hero-complex-second-born-1">
             <div>
               <p>Menz Winter Jacket</p>
-              <img src="/collection3.png" alt="" width={70} />
+              <img src="https://preview.colorlib.com/theme/estore/assets/img/collection/collection3.png" alt="" width={70} />
             </div>
             <div>
               <p>Menz Winter Jacket</p>
-              <img src="/collection4.png" alt="" width={70} />
+              <img src="https://preview.colorlib.com/theme/estore/assets/img/collection/collection4.png" alt="" width={70} />
             </div>
             <div>
               <p>Menz Winter Jacket</p>
-              <img src="/collection5.png" alt="" width={70} />
+              <img src="https://preview.colorlib.com/theme/estore/assets/img/collection/collection5.png" alt="" width={70} />
             </div>
           </div>
         </div>
