@@ -12,8 +12,7 @@ import { GoHeart } from "react-icons/go";
 import { IoCart } from "react-icons/io5";
 
 const Header = () => {
-
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   return (
     <div className="HeaderBody">
@@ -23,8 +22,7 @@ const Header = () => {
             <img src="/logo.png" alt="Logo" />
           </div>
           <div className="estore">
-            <span>+</span>
-            <h2>ESTORE</h2>
+            
           </div>
         </div>
         <div className="top-header-right">
@@ -65,13 +63,13 @@ const Header = () => {
           <NavLink to="/login" className="right-header-text">
             <p>My Account</p>
           </NavLink>
-          <NavLink to="/wishlist" className="right-header-text">
+          <NavLink to="/productcategory" className="right-header-text">
             <p>Wish List</p>
           </NavLink>
-          <NavLink to="/shopping" className="right-header-text">
+          <NavLink to="/shoppingcart" className="right-header-text">
             <p>Shopping</p>
           </NavLink>
-          <NavLink to="/cart" className="right-header-text">
+          <NavLink to="/shoppingcart" className="right-header-text">
             <p>Cart</p>
           </NavLink>
           <NavLink to="/checkout" className="right-header-text">
@@ -82,7 +80,7 @@ const Header = () => {
 
       <section className="buttom-header">
         <div className="buttom-header-logo">
-          <img src="/public/logo.png.webp" alt="Logo" />
+          <img src="/logo.png.webp" alt="" />
         </div>
         <article className="buttom-header-pages">
           <NavLink to="/" className="home">
@@ -121,7 +119,7 @@ const Header = () => {
             </div>
           </div>
           <div className="signin">
-            <div className="btn" onClick={() => navigate("/login")} >
+            <div className="btn" onClick={() => navigate("/login")}>
               <p>Sign In</p>
             </div>
           </div>
