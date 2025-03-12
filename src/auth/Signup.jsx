@@ -3,9 +3,36 @@ import '../styles/signup.css'
 import { useNavigate } from 'react-router-dom'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import axios from 'axios'
 
 const Signup = () => {
+
+  const [input, setInput] = React.useState({
+    userName: '',
+    email: '',
+    password: '',
+    confirmPassword: '',
+  })
+  console.log(input)
+   
+  const handleInputs = (e) =>{
+     const {value, name} = e.target
+     setInput({...input, [name]: value})
+  }
+   
+  const url = 'https://colorlib.onrender.com/api/v1'
   
+  const postDetails = async () =>{
+    try{
+      const res = await axios.post (`${url}/register`,input )
+      console.log(res)
+    }
+    
+    catch (error){
+         console.log(error)
+    }
+  }
+
     const navigate = useNavigate();
 
   return (
@@ -25,12 +52,32 @@ const Signup = () => {
               <div>
                 <h2>Welcome !<br />please Log in Now </h2>
                 <aside>
-                   <input type="text" placeholder='Enter username'/>
-                   <input type="email" placeholder='Enter email'/>
-                   <input type="password" placeholder='Enter password'/>
-                   <input type="password" placeholder='Confirm password'/>
+                   <input
+                    name='userName'
+                    value={input.userName}
+                    onChange={handleInputs}
+                    type="text"
+                    placeholder='Enter username'/>
+                   <input
+                    name='email'
+                    value={input.email}
+                    onChange={handleInputs}
+                    type="email"
+                    placeholder='Enter email'/>
+                   <input
+                    name='password'
+                    type="password"
+                    value={input.password}
+                    onChange={handleInputs}
+                    placeholder='Enter password'/>
+                   <input
+                    name='confirmPassword'
+                    type="password"
+                    value={input.confirmPassword}
+                    onChange={handleInputs}
+                    placeholder='Confirm password'/>
                 </aside>
-                <button>Sign-Up</button>
+                <button onClick={postDetails}>Sign-Up</button>
               </div>
            </div>
        </div>
