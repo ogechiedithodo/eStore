@@ -25,7 +25,7 @@ setLogInData({...logInData, [name]: value})
 
   const handleSubmit = () => {
     setOpenModal(false);
-    navigate("/resetpassword");
+    // navigate("/resetpassword");
     getUserEmail()
   };
 
