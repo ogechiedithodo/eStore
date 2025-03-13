@@ -2,7 +2,6 @@ import Header from "../components/Header";
 import "../styles/productcategory.css";
 import Footer from "../components/Footer";
 import { RiArrowDropDownLine } from "react-icons/ri";
-import { configs } from "eslint-plugin-react-refresh";
 
 const ProductCategory = () => {
   const productData = [

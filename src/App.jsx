@@ -8,6 +8,7 @@ import ProductCategory from "./pages/ProductCategory";
 import ProductDetails from "./pages/ProductDetails";
 import ShoppingCart from "./pages/ShoppingCart";
 import "./App.css";
+import ResetPassword from "./components/ResetPassword";
 
 const router = createBrowserRouter([
   { path: "/", element: <Home /> },
@@ -17,6 +18,7 @@ const router = createBrowserRouter([
   { path: "/productcategory", element: <ProductCategory /> },
   { path: "/productdetails", element: <ProductDetails /> },
   { path: "/shoppingcart", element: <ShoppingCart /> },
+  {path: "/resetpassword", element: <ResetPassword/>}
 ]);
 
 const App = () => {
