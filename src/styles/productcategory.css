@@ -44,10 +44,31 @@
 }
 .mapped-products{
     width: 100%;
-    height: 120vh;
+    height: 200vh;
     display: flex;
-   
+   padding: 20px;
+   display: flex;
+   flex-wrap: wrap;
     background-color: green;
+}
+.product-card{
+    height: 50%;
+    width: 30%;
+    background-color: aqua;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.product-img-holder{
+  width: 100%;
+  height: 70%;
+  background-color: red;
+}
+.product-details{
+    width: 100%;
+    height: 10%;
+    background-color: blue;
+    
 }
 .left-text{
     height: 100%;

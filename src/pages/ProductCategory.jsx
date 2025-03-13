@@ -83,8 +83,12 @@ const ProductCategory = () => {
             <img src="" alt="" />
           </div>
           <div className="product-details">
-            <span></span>
-            <span></span>
+
+          </div>
+          <div className="product-price">
+
+          <span>$40.00</span>
+          <span className="dashed-line">$60.00</span>
           </div>
         </div>
       </section>
