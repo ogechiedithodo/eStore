@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import "../styles/Home.css";
+import "../styles/home.css";
 import All from "../components/All";
 import New from "../components/New";
 import Offer from "../components/Offer";
