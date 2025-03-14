@@ -36,6 +36,20 @@ const ProductCategory = () => {
       Price: "$40",
     },
   ];
+  const data = [
+    {img: "/cubeimg.png",
+      title: "Free Shipping Method",
+      content: "aorem ixpsacdolor sit ameasecur adipisicing elitsf edasd."
+    },
+    {img: "/cubeimg.png",
+      title: "Free Shipping Method",
+      content: "aorem ixpsacdolor sit ameasecur adipisicing elitsf edasd."
+    },
+    {img: "/cubeimg.png",
+      title: "Free Shipping Method",
+      content: "aorem ixpsacdolor sit ameasecur adipisicing elitsf edasd."
+    },
+  ]
   return (
     <div className="product-category-body">
       <Header />
@@ -69,8 +83,12 @@ const ProductCategory = () => {
             <img src="" alt="" />
           </div>
           <div className="product-details">
-            <span></span>
-            <span></span>
+
+          </div>
+          <div className="product-price">
+
+          <span>$40.00</span>
+          <span className="dashed-line">$60.00</span>
           </div>
         </div>
       </section>

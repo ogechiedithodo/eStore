@@ -1,8 +1,12 @@
+
 import { useContext, useState, createContext } from "react";
 
 const PostsContext = createContext();
+export const usePost = () => useContext(PostsContext);
+
 
 export const PostProvider = ({ children }) => {
+
   const [dropmodalTwo, setDropModalTwo]= useState(false)
    const [dropModal, setDropModal]=useState(false)
   const [allPost, setAllPost] = useState([]);
@@ -25,10 +29,12 @@ export const PostProvider = ({ children }) => {
     dropmodalTwo,
     dropModal,
   };
+
+
+
   return (
     <PostsContext.Provider value={value}>{children}</PostsContext.Provider>
   );
 };
 
 
-export const usePost = () => useContext(PostsContext);
