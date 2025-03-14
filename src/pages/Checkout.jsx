@@ -154,7 +154,7 @@ const Checkout = () => {
                                 <p>I’ve read and accept the <small style={{fontSize:'15px',color:'#6fcaf7'}}>terms & <br/>Condition</small></p>
                             </span>
                     </section>
-                    <button className='checkOutPayPalBtn'>
+                    <button className='checkOutPayPaljBtn'>
                         Proceed to paypal
                     </button>
                 </div>
