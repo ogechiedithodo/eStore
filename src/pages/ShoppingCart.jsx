@@ -1,14 +1,20 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import "../styles/shoppingcart.css"
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import { IoMdArrowDropdown } from "react-icons/io";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { useState } from 'react';
+import { RiArrowDropUpLine } from "react-icons/ri";
+import DropModal from '../components/DropModal';
+import { usePost } from '../global/Context';
+import DropModalTwo from '../components/DropModalTwo';
 
 
 const ShoppingCart = () => {
+  const { dropModal, drop, dropTwo, dropmodalTwo} = usePost();
   const [count, setCount]=useState(1)
+ 
 
   const increaseCount = ()=>{
    setCount(count +1)
@@ -133,17 +139,31 @@ const ShoppingCart = () => {
 
 
           <article className='updateDetails'>
+          
             <section style={{display:"flex", justifyContent:"flex-end", gap:"10px", padding:"10px"}}>
               <span style={{fontFamily: `"Playfair Display", serif`, color:"#797c96", fontSize:"15px"}}>Caculate Shipping</span>
               <IoMdArrowDropdown />
             </section>
-            <section>
-              <p style={{color:"#24323d"}}>Bangladesh</p>
-              <RiArrowDropDownLine style={{color:"#797c96"}}/>
-            </section>
-            <section>
+           
+                     <section onClick={ drop}>
+                     <p style={{color:"#24323d"}}>Bangladesh</p>
+                     {
+                       dropModal ? <RiArrowDropUpLine/> : <RiArrowDropDownLine style={{color:"#797c96"}}/>
+                     }
+                     {
+                       dropModal && <DropModal/>
+                     }   
+                   </section>
+          
+       
+            <section onClick={dropTwo}>
             <p style={{color:"#24323d"}}>Select a state</p>
-            <RiArrowDropDownLine style={{color:"#797c96"}}/>
+            {
+              dropmodalTwo ? <RiArrowDropUpLine/> : <RiArrowDropDownLine style={{color:"#797c96"}}/>
+            }
+            {
+             dropmodalTwo && <DropModalTwo/>
+            }
             </section>
             <section>
             <p style={{color:"#24323d"}}>postcode/zipcode</p>
