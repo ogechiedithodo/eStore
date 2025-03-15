@@ -90,7 +90,7 @@ setLogInData({...logInData, [name]: value})
                 <input 
                 name = "userName"
                 onChange={handleInputChange}
-                value={logInData.username}
+                value={logInData.userName}
                 type="text" 
                 placeholder="Username" />
               </div>
