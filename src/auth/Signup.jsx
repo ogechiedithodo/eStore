@@ -3,6 +3,9 @@ import '../styles/signup.css'
 import { useNavigate } from 'react-router-dom'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { toast } from "react-toastify";
 import axios from 'axios'
 
 const Signup = () => {
@@ -26,19 +29,22 @@ const Signup = () => {
     try{
       const res = await axios.post (`${url}/register`,input )
       console.log(res)
+      toast.success(res.data.message)
     }
     
     catch (error){
          console.log(error)
+          toast.error(error.response.data.message)
     }
   }
 
     const navigate = useNavigate();
 
   return (
+    
     <div className='signup-container'>
         <Header />
-
+        <ToastContainer />
        <div className='signup-form-card'>
               <h1>Sign-Up</h1>
        </div>
