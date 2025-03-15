@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "../styles/login.css";
 import axios from "axios";
+import { toast, ToastContainer } from "react-toastify";
 
 const url = "https://colorlib.onrender.com/api/v1";
 
@@ -15,18 +16,17 @@ const Login = () => {
 
   const [logInData, setLogInData] = useState({
     userName: "",
-    password: ""
-   })
-  //  console.log(logInData)
-const handleInputChange = (e) => {
-const {value, name} = e.target;
-setLogInData({...logInData, [name]: value})
-}
+    password: "",
+  });
+  console.log(logInData);
+  const handleInputChange = (e) => {
+    const { value, name } = e.target;
+    setLogInData({ ...logInData, [name]: value });
+  };
 
   const handleSubmit = () => {
     setOpenModal(false);
-    // navigate("/resetpassword");
-    getUserEmail()
+    getUserEmail();
   };
 
   const handleChange = (e) => {
@@ -34,28 +34,31 @@ setLogInData({...logInData, [name]: value})
     setUserEmail({ ...userEmail, [name]: value });
   };
 
-  const getUserEmail = async()=> {
-    try{
-      const res = await axios.post(`${url}/forgot/password`,userEmail)
-      console.log(res)
+  const getUserEmail = async () => {
+    try {
+      const res = await axios.post(`${url}/forgot/password`, userEmail);
+      console.log(res);
+      toast.success("Link has been sent to email address");
+    } catch (error) {
+      console.log(error);
+      toast.error("Enter a valid email")
     }
-    catch (error){
-      console.log(error)
+  };
+  const postLogInData = async () => {
+    try {
+      const res = await axios.post(`${url}/login`, logInData);
+      console.log(res);
+      toast.success(res.data.message);
+    } catch (error) {
+      console.log(error);
+      toast.error(error.response.data.message);
     }
-  }
-  const postLogInData = async()=> {
-    try{
-      const res = await axios.post(`${url}/login`, logInData)
-      console.log(res)
-    }
-    catch(error){
-      console.log(error)
-    }
-  }
+  };
 
   return (
     <div className="loginBody">
       <Header />
+      <ToastContainer />
       <div className="login-hero">
         <div className="login-img">
           <img src="/img.png" alt="" />
@@ -87,21 +90,22 @@ setLogInData({...logInData, [name]: value})
             </div>
             <div className="user-details">
               <div className="input-area">
-                <input 
-                name = "userName"
-                onChange={handleInputChange}
-                value={logInData.userName}
-                type="text" 
-                placeholder="Username" />
+                <input
+                  name="userName"
+                  onChange={handleInputChange}
+                  value={logInData.userName}
+                  type="text"
+                  placeholder="Username"
+                />
               </div>
               <div className="input-area">
-                <input 
-                name = "password"
-                onChange={handleInputChange}
-                value={logInData.password}
-                type="text"
-                 placeholder="Password" 
-                 />
+                <input
+                  name="password"
+                  onChange={handleInputChange}
+                  value={logInData.password}
+                  type="text"
+                  placeholder="Password"
+                />
               </div>
               <div className="check">
                 <input type="checkbox" />
@@ -124,11 +128,9 @@ setLogInData({...logInData, [name]: value})
       <Footer />
 
       {openModal ? (
-        <div className="modal" >
-          <div className="modal-content" >
-            <span className="close">
-              &times;
-            </span>
+        <div className="modal">
+          <div className="modal-content">
+            <span className="close">&times;</span>
             <h2>Forgot Password</h2>
             <p>Enter your email to reset your password:</p>
             <input
