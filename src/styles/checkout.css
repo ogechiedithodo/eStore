@@ -1,0 +1,393 @@
+.checkOutMain {
+    /* height: max-content; */
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.checkOutHero {
+    height: 35vh;
+    width: 100%;
+    background-color: blue;
+    display: flex;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+    background: url('/category.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.checkOutReturnWrapper {
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    /* background-color: grey; */
+}
+
+.returnText {
+    height: 45px;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    padding: 20px;
+    align-items: center;
+    background-color: #f7f7f7;
+}
+
+.checkOutReturn {
+    height: 90%;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    /* background-color: yellow; */
+
+
+    p {
+        font-size: 16px;
+        color: grey;
+    }
+}
+
+.checkOutLoginForm {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.checkOutLoginInput {
+    height: max-content;
+    width: 60%;
+    display: flex;
+    gap: 34px;
+
+
+    input {
+        height: 32px;
+        width: 280px;
+        outline: none;
+        border: 1px solid grey;
+        font-size: 15px;
+        color: black;
+        padding: 10px;
+    }
+}
+
+.checkOutLoginInputBtm {
+    height: max-content;
+    width: 50%;
+    display: flex;
+    gap: 25px;
+    /* justify-content: center; */
+    align-items: center;
+    text-align: center;
+}
+
+.checkOutBtn {
+    height: 60px;
+    width: 100px;
+    font-size: 20px;
+    border: 1px solid #2678fc;
+    border-radius: 10px;
+    background-color: transparent;
+    color: #2678fc;
+    outline: none;
+    font-weight: 50;
+}
+
+.checkOutBtn:hover{
+    background-color: #2678fc;
+    color: white;
+    transition-duration:1000ms;
+}
+
+.checkOutCheckBox {
+    height: 20px;
+    width: 20px;
+}
+
+
+.checkOutCouponBtm {
+    height: 40%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+}
+
+
+.checkOutCouponInput {
+    height: 35px;
+    padding: 10px;
+    outline: none;
+    border: 1px solid grey;
+    width: 65%;
+}
+
+.checkOutApplyBtn {
+    height: 40px;
+    width: 140px;
+    border-radius: 20px;
+    color: #605094;
+    border: 1px solid grey;
+}
+
+.checkOutApplyBtn:hover{
+    background-color: #2678fc;
+    color: white;
+    transition-duration:1000ms;
+}
+
+
+
+.billingWrapper {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.checkOutReceipt {
+    height: 105vh;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f7f7f7;
+}
+
+
+
+.checkOutPayPalBtn{
+    height: 15%;
+    width: 70%;
+    border: 1px solid #2678fc;
+    border-radius: 10px;
+    background-color: transparent;
+    color: #2678fc;
+    font-weight: 50;
+}
+
+
+.checkOutPayPalBtn:hover{
+    background-color: #2678fc;
+    color: white;
+    transition-duration:1000ms;
+}
+
+
+.recieptHeader{
+    height: 8%;
+    width: 80%;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.434);
+    padding: 15px;
+    font-size: 20px;
+    color: #415097;
+}
+
+.productTotal{
+    height: 5%;
+    width: 80%;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.137);
+    padding: 10px;
+    color: #4150a1;
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.productFbbAmount{
+    height: 5%;
+    width: 80%;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.137);
+    padding: 5px;
+    display: flex;
+    font-size: 13px;
+    color: #8d93b6;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.paypalSection{
+    height: 60%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+}
+
+.termsCondition{
+    height:5%;
+    width: 100%;
+    display: flex;
+    gap: 5px;
+}
+
+
+.payPalAd{
+    height: 25%;
+    width: 90%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputWrapper {
+    height: 100%;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 10px;
+
+    input {
+        height: 10%;
+        width: 100%;
+        font-size: 15px;
+        color: grey;
+        padding: 10px;
+    }
+}
+
+
+.countryDropDown {
+    height: max-content;
+    width: 100%;
+    border: 1px solid grey;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    color: grey;
+    text-align: center;
+}
+
+.optionModal {
+    height: 13vh;
+    width: 100%;
+    gap: 7px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 230px;
+    left: 0px;
+    border: 1px solid grey;
+    background-color: white;
+
+}
+
+.optionModal2 {
+    height: 13vh;
+    width: 100%;
+    gap: 7px;
+    bottom: 215px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    border: 1px solid grey;
+    background-color: white;
+}
+
+.twinInput1 {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+    input {
+        height: 10%;
+        width: 65%;
+        font-size: 15px;
+        color: grey;
+        padding: 10px;
+    }
+}
+
+.twinInput2 {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+    input {
+        height: 10%;
+        width: 65%;
+        font-size: 15px;
+        color: grey;
+        padding: 10px;
+    }
+}
+
+
+.checkOutConfirmArea {
+    height: 20%;
+    width: 100%;
+    /* background-color: red; */
+}
+
+.createAccount{
+    height:80px;
+    width: 60%;
+    display: flex;
+    justify-content: flex-start;
+    text-align: center;
+    background-color: red;
+}
+
+.checkBox1{
+    height: 20px;
+    width: 20px;
+}
+
+
+.checkOutCheckBoxWrapper{
+    height: 35vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+
+    & textarea{
+        height: 200px;
+        width: 100%;
+        outline: none;
+        padding: 15px;
+    }
+
+
+    & nav{
+        height:max-content;
+        width:90%;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        text-align: center;
+
+
+        & .checkBoxInput{
+            height: 17px;
+            width: 17px;
+        }
+    }
+}
