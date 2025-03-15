@@ -1,7 +1,9 @@
 import Header from "../components/Header";
 import "../styles/productdetails.css";
 import Footer from "../components/Footer";
+import { useState } from "react";
 const ProductDetails = () => {
+  const [count, setCount] = useState(0)
   return (
     <div className="product-details-body">
       <Header />
@@ -47,9 +49,9 @@ const ProductDetails = () => {
               <span className="text-quantity">Quantity</span>
               <span className="box-quantity">
                 <div className="main-box">
-                  <span>-</span>
-                  <span className="grey">1</span>
-                  <span>+</span>
+                  <span onClick={()=> setCount(count < 1 ? 0 : ( count - 1))}>-</span>
+                  <span className="grey">{count}</span>
+                  <span onClick={()=> setCount(count + 1)}>+</span>
                 </div>
               </span>
               <span className="amount-quantity">$5</span>

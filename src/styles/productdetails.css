@@ -107,6 +107,7 @@
     font-size: larger;
     font-family: sans-serif;
     color: rgba(0, 0, 0, 0.514);
+    cursor: pointer;
   }
 }
 .grey {

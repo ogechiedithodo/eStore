@@ -82,7 +82,7 @@ const ProductCategory = () => {
           <div className="product-img-holder">
             <img src="" alt="" />
           </div>
-          <div className="product-details">
+          <div className="header-product-details">
 
           </div>
           <div className="product-price">

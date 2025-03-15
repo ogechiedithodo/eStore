@@ -252,3 +252,6 @@
   align-items: center;
   justify-content: center;
 }
+a.active{
+  color: rgba(255, 0, 0, 0.612);
+}

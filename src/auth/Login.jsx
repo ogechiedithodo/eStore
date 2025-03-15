@@ -25,7 +25,7 @@ setLogInData({...logInData, [name]: value})
 
   const handleSubmit = () => {
     setOpenModal(false);
-    navigate("/resetpassword");
+    // navigate("/resetpassword");
     getUserEmail()
   };
 
@@ -90,7 +90,7 @@ setLogInData({...logInData, [name]: value})
                 <input 
                 name = "userName"
                 onChange={handleInputChange}
-                value={logInData.username}
+                value={logInData.userName}
                 type="text" 
                 placeholder="Username" />
               </div>
