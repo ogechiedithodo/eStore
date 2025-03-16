@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../styles/resetpassword.css";
 import axios from "axios";
+import { useParams } from "react-router-dom";
 
 const url = "https://colorlib.onrender.com/api/v1";
 
@@ -9,22 +10,19 @@ const ResetPassword = () => {
     newPassword: "",
     confirmPassword: "",
   });
+  const {token} = useParams()
+  console.log(token)
   console.log(resetPassword);
 
   const handleChange = (e) => {
     const { value, name } = e.target;
     setResePassword({ ...resetPassword, [name]: value });
   };
-  
-  const localStorageData = JSON.parse(localStorage.getItem("userLoginToken"));
 
-  const userToken = localStorageData.userToken;
-  console.log(userToken)
-
-  const postResetPassword = async () => {
+  const postResetPassword = async (myToken) => {
     try {
       const res = await axios.post(
-        `${url`${userToken}`}/reset/password/:token`,
+        `${url}/reset/password/${myToken}`,
         resetPassword
       );
       console.log(res);
@@ -52,7 +50,7 @@ const ResetPassword = () => {
           placeholder="Confirm Password"
           name="confirmPassword"
         />
-        <button onClick={postResetPassword}>Reset Password</button>
+        <button onClick={()=>postResetPassword(token)}>Reset Password</button>
       </div>
     </div>
   );
