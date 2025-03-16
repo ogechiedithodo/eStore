@@ -49,6 +49,12 @@ const Login = () => {
       const res = await axios.post(`${url}/login`, logInData);
       console.log(res);
       toast.success(res.data.message);
+
+      localStorage.setItem(
+        "userLoginToken", JSON.stringify({userToken: res.data.token})
+      )
+      console.log(res.data.token)
+
     } catch (error) {
       console.log(error);
       toast.error(error.response.data.message);

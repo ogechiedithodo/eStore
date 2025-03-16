@@ -15,11 +15,16 @@ const ResetPassword = () => {
     const { value, name } = e.target;
     setResePassword({ ...resetPassword, [name]: value });
   };
+  
+  const localStorageData = JSON.parse(localStorage.getItem("userLoginToken"));
+
+  const userToken = localStorageData.userToken;
+  console.log(userToken)
 
   const postResetPassword = async () => {
     try {
       const res = await axios.post(
-        `${url}/reset/password/:token`,
+        `${url`${userToken}`}/reset/password/:token`,
         resetPassword
       );
       console.log(res);
