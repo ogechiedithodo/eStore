@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "../styles/resetpassword.css";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+import { toast, ToastContainer } from "react-toastify";
+
 
 const url = "https://colorlib.onrender.com/api/v1";
 
@@ -25,13 +27,16 @@ const ResetPassword = () => {
         `${url}/reset/password/${myToken}`,
         resetPassword
       );
-      console.log(res);
+      console.log(res.response.data.message);
+      toast.success(res.response.data.message)
     } catch (error) {
-      console.log(error);
+      console.log(error.response.data.message);
+      toast.error(error.response.data.message)
     }
   };
   return (
     <div className="modal">
+      <ToastContainer/>
       <div className="modal-content">
         <span className="close">&times;</span>
         <h2>Reset Password</h2>

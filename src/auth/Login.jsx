@@ -10,6 +10,7 @@ const url = "https://colorlib.onrender.com/api/v1";
 
 const Login = () => {
   const navigate = useNavigate();
+  const [modal, setModal] = useState(true)
   const [openModal, setOpenModal] = useState(false);
   const [userEmail, setUserEmail] = useState({ email: "" });
   console.log(userEmail);
@@ -57,7 +58,7 @@ const Login = () => {
 
     } catch (error) {
       console.log(error);
-      toast.error(error.response.data.message);
+      toast.error(error.res.data.message);
     }
   };
 
@@ -134,7 +135,7 @@ const Login = () => {
       <Footer />
 
       {openModal ? (
-        <div className="modal">
+        <div className="modal" onClick={()=>setModal(false)}>
           <div className="modal-content">
             <span className="close">&times;</span>
             <h2>Forgot Password</h2>
