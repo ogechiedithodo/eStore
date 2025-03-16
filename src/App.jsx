@@ -18,7 +18,7 @@ const router = createBrowserRouter([
   { path: "/productcategory", element: <ProductCategory /> },
   { path: "/productdetails", element: <ProductDetails /> },
   { path: "/shoppingcart", element: <ShoppingCart /> },
-  {path: "/resetpassword", element: <ResetPassword/>}
+  {path: "/resetpassword/:token", element: <ResetPassword/>}
 ]);
 
 const App = () => {
