@@ -20,20 +20,35 @@ const ResetPassword = () => {
     const { value, name } = e.target;
     setResePassword({ ...resetPassword, [name]: value });
   };
+const validatePassword = (password) => {
+  const passwordRegex = /^.{8,}$/;
+  return passwordRegex.test(password)
+
+}
 
   const postResetPassword = async (myToken) => {
-    try {
-      const res = await axios.post(
-        `${url}/reset/password/${myToken}`,
-        resetPassword
-      );
-      console.log(res.response.data.message);
-      toast.success(res.response.data.message)
-    } catch (error) {
-      console.log(error.response.data.message);
-      toast.error(error.response.data.message)
+    if(resetPassword.newPassword && resetPassword.newPassword === ''){
+           toast.error("Fields can't be empty")
+    }
+    else if(!validatePassword(resetPassword)){
+      toast.error("Password must contain numbers and special characters")
+
+    }
+    else{
+      try {
+        const res = await axios.post(
+          `${url}/reset/password/${myToken}`,
+          resetPassword
+        );
+        console.log(res.response.data.message);
+        toast.success(res.response.data.message)
+      } catch (error) {
+        console.log(error.response.data.message);
+        toast.error(error.response.data.message)
+      }
     }
   };
+
   return (
     <div className="modal">
       <ToastContainer/>

@@ -50,6 +50,8 @@ const ProductCategory = () => {
       content: "aorem ixpsacdolor sit ameasecur adipisicing elitsf edasd."
     },
   ]
+
+  
   return (
     <div className="product-category-body">
       <Header />
