@@ -9,16 +9,18 @@ import ProductDetails from "./pages/ProductDetails";
 import ShoppingCart from "./pages/ShoppingCart";
 import "./App.css";
 import ResetPassword from "./components/ResetPassword";
+import VerifyEmail from "./auth/VerifyEmail";
 
 const router = createBrowserRouter([
   { path: "/", element: <Home /> },
-  { path: "/login", element: <Login /> },
+  { path: "/login", element: <Login/> },
   { path: "/signup", element: <Signup /> },
   { path: "/checkout", element: <Checkout /> },
   { path: "/productcategory", element: <ProductCategory /> },
   { path: "/productdetails", element: <ProductDetails /> },
   { path: "/shoppingcart", element: <ShoppingCart /> },
-  {path: "/resetpassword", element: <ResetPassword/>}
+  {path: "/resetpassword", element: <ResetPassword/>},
+  {path: "/verifyEmail", element:<VerifyEmail/>}
 ]);
 
 const App = () => {
