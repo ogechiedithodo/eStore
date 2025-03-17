@@ -9,7 +9,9 @@ import Footer from "../components/Footer";
 import { RiArrowDropDownLine } from "react-icons/ri";
 
 const ProductCategory = () => {
+
  const [activeTab, setActiveTab] = useState("All");
+
   return (
     <div className="product-category-body">
       <Header />

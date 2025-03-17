@@ -92,13 +92,10 @@ justify-content: center;
         display: flex;
         align-items: center;
         justify-content: center;
-        color: rgba(0, 0, 255, 0.619);
+        color: black;
         cursor: pointer;
     }
-    & span:hover{
-        color: #ffffff;
-        background-color: rgba(0, 0, 255, 0.785);
-    } 
+    
     }
     .forget-password{
         width: 80%;
@@ -189,7 +186,7 @@ input[type="email"] {
 }
 
 button {
-    background-color: #007bff;
+    background-color: #007bff4c;
     color: white;
     border: none;
     padding: 10px 20px;
