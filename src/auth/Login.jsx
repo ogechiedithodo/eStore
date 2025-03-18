@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "../styles/login.css";
@@ -7,7 +7,11 @@ import axios from "axios";
 
 const url = "https://colorlib.onrender.com/api/v1";
 
+
 const Login = () => {
+  
+  
+
   const navigate = useNavigate();
   const [openModal, setOpenModal] = useState(false);
   const [userEmail, setUserEmail] = useState({ email: "" });

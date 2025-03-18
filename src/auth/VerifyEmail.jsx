@@ -1,40 +1,31 @@
-import { useEffect, useState } from "react";
-import { useSearchParams, useNavigate } from "react-router-dom";
-import axios from "axios";
-import { toast } from "react-toastify";
+import axios from 'axios'
+import React from 'react'
+import { useParams } from 'react-router-dom'
 
 const VerifyEmail = () => {
-  const [message, setMessage] = useState("Verifying...");
-  const [searchParams] = useSearchParams();
-  const navigate = useNavigate();
 
-  useEffect(() => {
-    const verifyEmail = async () => {
-      const token = searchParams.get("token"); 
+  const {tokens} = useParams()
+   
+  console.log(tokens)
 
-      if (!token) {
-        setMessage("Invalid verification link.");
-        return;
-      }
-
+  const url = 'https://colorlib.onrender.com/api/v1/verify/user/'
+  
+  const handleVerify = async () =>{
       try {
-        const response = await axios.post("https://colorlib.onrender.com/api/v1/verify/user/", {token});
-
-        setMessage(response.data.message || "Email verified successfully!");
-        toast.success("Email verified! Redirecting...");
-
-        
-        setTimeout(() => navigate("/login"), 3000);
+        const res =  await axios.get(`${url}${tokens}`)
+        console.log(res)
       } catch (error) {
-        setMessage("Verification failed. Link may be expired or invalid.");
-        toast.error("Verification failed. Try again.");
+        console.log(error)
       }
-    };
+  }
 
-    verifyEmail();
-  }, [searchParams, navigate]);
 
-  return <h2>{message}</h2>;
-};
+  return (
 
-export default VerifyEmail;
+    <div>
+      <button onClick={handleVerify}>Verify Email</button>
+    </div>
+  )
+}
+
+export default VerifyEmail
