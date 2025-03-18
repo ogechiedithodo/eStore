@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React from 'react'
 import { useParams } from 'react-router-dom'
+import { toast, ToastContainer } from 'react-toastify'
 
 const VerifyEmail = () => {
 
@@ -14,15 +15,18 @@ const VerifyEmail = () => {
       try {
         const res =  await axios.get(`${url}${tokens}`)
         console.log(res)
+        toast.success('verified successfully')
       } catch (error) {
         console.log(error)
+        toast
       }
   }
 
 
   return (
-
+    
     <div>
+      <ToastContainer/>,
       <button onClick={handleVerify}>Verify Email</button>
     </div>
   )
