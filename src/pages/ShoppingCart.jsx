@@ -62,19 +62,19 @@ const ShoppingCart = () => {
                 </div>
               </section>
               <section>
-                <div style={{ width: "30%", height: "37%", fontFamily: "Playfair Display", serif, display: "flex", justifyContent: "center", alignItems: "center", color: "rgb(107, 101, 96)" }}>{item.price1}</div>
+                <div style={{ width: "30%", height: "37%", fontFamily: `"Playfair Display", serif`, display: "flex", justifyContent: "center", alignItems: "center", color: "rgb(107, 101, 96)" }}>{item.price1}</div>
                 <div style={{ width: "30%", height: "60%", display: "flex", justifyContent: "center", alignItems: "center" }}>
                   <span style={{
                     width: "70%", height: "41%", borderRadius: "5px", border: "1px solid #e0e0e0",  alignItems: "center",  color: " #e0e0e0",
                     display: "flex", justifyContent: "space-between",  }}>
-                      <p style={{ width: "40%", height: "100%", display: "flex", justifyContent:"center", alignItems:"center", color:"black", fontSize:"20px", fontFamily: "Playfair Display", serif, paddingLeft:"20px"}}>{count}</p>
+                      <p style={{ width: "40%", height: "100%", display: "flex", justifyContent:"center", alignItems:"center", color:"black", fontSize:"20px", fontFamily: `"Playfair Display", serif`, paddingLeft:"20px"}}>{count}</p>
                       <article style={{ width: "40%", height: "100%", display: "flex", flexDirection: "column" }}>
                           <div style={{ width: "100%", height: "50%", border: "0.7px solid #e0e0e0", display: "flex", justifyContent: "center", alignItems: "center", color: "black", fontSize: "20px", cursor: "pointer", }} onClick={increaseCount}>+</div>
                           <div style={{ width: "100%", height: "50%", border: "0.7px solid #e0e0e0", display: "flex", justifyContent: "center", alignItems: "center", color: "black", fontSize: "20px", cursor: "pointer" }} onClick={reduceCount}>-</div>
                       </article>
                   </span>
                 </div>
-                <div style={{ width: "30%", height: "37%", fontFamily: "Playfair Display", serif, display: "flex", justifyContent: "center", alignItems: "center", color: "rgb(107, 101, 96)" }}>{item.price2}</div>
+                <div style={{ width: "30%", height: "37%", fontFamily: `"Playfair Display", serif`, display: "flex", justifyContent: "center", alignItems: "center", color: "rgb(107, 101, 96)" }}>{item.price2}</div>
               <FaTrash color='red' size={20} onClick={removeFromCart}/>
               </section>
             </article>
@@ -98,7 +98,7 @@ const ShoppingCart = () => {
         <section className='calDiv'>
           <div style={{ display: "flex", justifyContent: "space-between" }}>
             <nav  style={{ width: "30%", height:"100%", display: "flex", justifyContent: "center", alignItems:"center", gap: "20px" }}>
-              <p style={{fontFamily: "Playfair Display", serif}}>Support</p>
+              <p style={{fontFamily: `"Playfair Display", serif`}}>Support</p>
             </nav>
             <nav style={{ width: "50%", height:"100%", display: "flex", justifyContent: "center", alignItems:"center", gap: "20px" }}>
               <p>Flat Rate: $5.00</p>
@@ -122,7 +122,7 @@ const ShoppingCart = () => {
           <article className='updateDetails'>
           
             <section style={{display:"flex", justifyContent:"flex-end", gap:"10px", padding:"10px"}}>
-              <span style={{fontFamily: "Playfair Display", serif, color:"#797c96", fontSize:"15px"}}>Caculate Shipping</span>
+              <span style={{fontFamily: `"Playfair Display", serif`, color:"#797c96", fontSize:"15px"}}>Caculate Shipping</span>
               <IoMdArrowDropdown />
             </section>
            
