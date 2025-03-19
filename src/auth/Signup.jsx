@@ -63,6 +63,7 @@ const Signup = () => {
       try{
         const res = await axios.post (`${url}/register`,input )
         console.log(res)
+        navigate('/login')
         toast.success(res.data.message)
       }
       catch (error){
@@ -123,6 +124,7 @@ const Signup = () => {
                  {backgroundColor :  !disabled ? '#2577FD' : '#b7bbc0'}
                  }
                 disabled={!disabled}
+
                  >Sign-Up</button>
               </div>
            </div>
