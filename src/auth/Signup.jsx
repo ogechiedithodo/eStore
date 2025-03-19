@@ -22,7 +22,14 @@ const Signup = () => {
   const handleInputs = (e) =>{
      const {value, name} = e.target
      setInput({...input, [name]: value})
-     setDisabled(input.userName && input.email && input.password && input.confirmPassword)
+     setDisabled(
+      input.userName.trim() !== '' &&
+      input.email.trim() !== '' &&
+      input.password.trim() !== '' &&
+      input.confirmPassword.trim() !== ''
+    );
+    
+    //  setDisabled(input.userName && input.email && input.password && input.confirmPassword)
   }
    
   const url = 'https://colorlib.onrender.com/api/v1'
@@ -45,9 +52,12 @@ const Signup = () => {
     else if (input.password === ''){
       toast.error('Password cannot be empty')
     }
-    else if(input.password !== passwordRegex ){
-      toast.error('Invalid password')
-      toast.error('Password must not be less than 8 characters')
+    // else if(input.password !== passwordRegex ){
+    //   toast.error('Invalid password')
+    //   toast.error('Password must not be less than 8 characters')
+    // }
+    else if (input.password !== input.confirmPassword){
+      toast.error('password and confirmpassword does not match')
     }
     else{
       try{
@@ -110,9 +120,9 @@ const Signup = () => {
                 <button
                  onClick={postDetails}
                  style={
-                 {backgroundColor :  !disabled ? '#b7bbc0' : '#2577FD'}
+                 {backgroundColor :  !disabled ? '#2577FD' : '#b7bbc0'}
                  }
-                disabled={disabled}
+                disabled={!disabled}
                  >Sign-Up</button>
               </div>
            </div>
