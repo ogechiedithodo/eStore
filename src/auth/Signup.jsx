@@ -63,7 +63,7 @@ const Signup = () => {
       try{
         const res = await axios.post (`${url}/register`,input )
         console.log(res)
-        navigate('/login')
+        navigate('/verifyEmail')
         toast.success(res.data.message)
       }
       catch (error){
