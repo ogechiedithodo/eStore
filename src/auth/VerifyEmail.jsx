@@ -1,11 +1,12 @@
 import axios from 'axios'
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { toast, ToastContainer } from 'react-toastify'
 
 const VerifyEmail = () => {
 
   const {tokens} = useParams()
+  const navigate = useNavigate()
    
   console.log(tokens)
 
@@ -16,6 +17,7 @@ const VerifyEmail = () => {
         const res =  await axios.get(`${url}${tokens}`)
         console.log(res)
         toast.success('verified successfully')
+        setTimeout(() => navigate('/login'), 3000);
       } catch (error) {
         console.log(error)
         toast
