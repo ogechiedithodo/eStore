@@ -180,7 +180,7 @@ const Login = () => {
       {openModal ? (
         <div className="modal" onClick={() => setModal(false)}>
           <div className="modal-content">
-            <span className="close">&times;</span>
+            <span className="close">X</span>
             <h2>Forgot Password</h2>
             <p>Enter your email to reset your password:</p>
             <input
