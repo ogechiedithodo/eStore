@@ -10,8 +10,7 @@ const url = "https://colorlib.onrender.com/api/v1";
 
 const Login = () => {
   const navigate = useNavigate();
-  const [isDisabled, setIsDisabled] = useState(false)
-  const [modal, setModal] = useState(true);
+  const [isDisabled, setIsDisabled] = useState(false);
   const [openModal, setOpenModal] = useState(false);
   const [userEmail, setUserEmail] = useState({ email: "" });
   console.log(userEmail);
@@ -24,11 +23,7 @@ const Login = () => {
   const handleInputChange = (e) => {
     const { value, name } = e.target;
     setLogInData({ ...logInData, [name]: value });
-    setIsDisabled(
-      !(logInData.userName &&
-        logInData.password
-      )
-    )
+    setIsDisabled(!(logInData.userName && logInData.password));
   };
 
   const handleSubmit = () => {
@@ -54,8 +49,7 @@ const Login = () => {
       toast.error("This field can't be empty");
     } else if (!emailValidation(userEmail.email)) {
       toast.error("Invalid Email Format");
-    } 
-     else {
+    } else {
       try {
         const res = await axios.post(`${url}/forgot/password`, userEmail);
         console.log(res);
@@ -73,11 +67,9 @@ const Login = () => {
       toast.error("Username can't be empty");
     } else if (logInData.password === "") {
       toast.error(" password Fields can't be empty!");
-    }
-    else if (!validatePassword(logInData.password)) {
+    } else if (!validatePassword(logInData.password)) {
       toast.error("Password must contain numbers and special characters");
-    }
-     else {
+    } else {
       try {
         const res = await axios.post(`${url}/login`, logInData);
         console.log(res);
@@ -154,10 +146,11 @@ const Login = () => {
                 <p>Remember me</p>
               </div>
               <div
-               className="login-btn" 
-               onClick={postLogInData}
-               disable = {isDisabled}
-               style={{background : isDisabled ? "#8b8b8b" : "#2577fe"}}>
+                className="login-btn"
+                onClick={postLogInData}
+                disable={isDisabled}
+                style={{ background: isDisabled ? "#8b8b8b" : "#2577fe" }}
+              >
                 <span>LOG IN</span>
               </div>
               <div
@@ -174,7 +167,7 @@ const Login = () => {
       <Footer />
 
       {openModal ? (
-        <div className="modal" onClick={() => setModal(false)}>
+        <div className="modal" onClick={() => setOpenModal(false)}>
           <div className="modal-content">
             <span className="close">&times;</span>
             <h2>Forgot Password</h2>
