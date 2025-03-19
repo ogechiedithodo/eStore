@@ -123,6 +123,8 @@ const Header = () => {
           <div className="signin">
             <div className="btn" onClick={() => navigate("/login")}>
               <p>Sign In</p>
+              <p>Sign In</p>
+              <p>Sign In</p>
             </div>
           </div>
         </section>
