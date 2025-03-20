@@ -99,8 +99,9 @@
 .sign-up > div:nth-of-type(2) button{
     width: 100%;
     padding: 10px 15px;
-    background-color: #2577FD;
     border: none;
+    /* background-color: #2577FD;
+    background-color: #b7bbc0; */
     outline: none;
     color: white;
     font-family: "Poppins",sans-serif;

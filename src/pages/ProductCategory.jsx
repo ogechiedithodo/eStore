@@ -1,57 +1,17 @@
 import Header from "../components/Header";
 import "../styles/productcategory.css";
+import { useState } from "react";
+import All from "../components/All";
+import Featured from "../components/Featured";
+import New from "../components/New";
+import Offer from "../components/Offer";
 import Footer from "../components/Footer";
 import { RiArrowDropDownLine } from "react-icons/ri";
 
 const ProductCategory = () => {
-  const productData = [
-    {
-      img: "/product1.png",
-      description: "Green Dreess with details",
-      Price: "$40",
-    },
-    {
-      img: "/product2.png",
-      description: "Green Dreess with details",
-      Price: "$40",
-    },
-    {
-      img: "/product3.png",
-      description: "Green Dreess with details",
-      Price: "$40",
-    },
-    {
-      img: "/product4.png",
-      description: "Green Dreess with details",
-      Price: "$40",
-    },
-    {
-      img: "/product5.png",
-      description: "Green Dreess with details",
-      Price: "$40",
-    },
-    {
-      img: "/product6.png",
-      description: "Green Dreess with details",
-      Price: "$40",
-    },
-  ];
-  const data = [
-    {img: "/cubeimg.png",
-      title: "Free Shipping Method",
-      content: "aorem ixpsacdolor sit ameasecur adipisicing elitsf edasd."
-    },
-    {img: "/cubeimg.png",
-      title: "Free Shipping Method",
-      content: "aorem ixpsacdolor sit ameasecur adipisicing elitsf edasd."
-    },
-    {img: "/cubeimg.png",
-      title: "Free Shipping Method",
-      content: "aorem ixpsacdolor sit ameasecur adipisicing elitsf edasd."
-    },
-  ]
 
-  
+ const [activeTab, setActiveTab] = useState("All");
+
   return (
     <div className="product-category-body">
       <Header />
@@ -59,41 +19,41 @@ const ProductCategory = () => {
         <div className="product-category-img-holder">
           <img src="/productcategoryimg.png" alt="" />
         </div>
-        <div className="product-header">
-          <div className="empty"></div>
-          <div className="product-header-text">
-            <div className="left-text">
-              <span>All</span>
-              <span>New</span>
-              <span>Featured</span>
-              <span>Offer</span>
+      </div>
+      <div className="home-product">
+              <section className="home-product-header">
+                <aside>
+                  <h1>Latest Product</h1>
+                </aside>
+                <aside className="home-product-header-aside">
+                  <p className={activeTab === "All" ? "active-tab" : "" } onClick={() => setActiveTab("All")}>All</p>
+                  <p className={activeTab === "New" ? "active-tab" : "" } onClick={() => setActiveTab("New")}>New</p>
+                  <p className={activeTab === "Featured" ? "active-tab" : "" } onClick={() => setActiveTab("Featured")}>Featured</p>
+                  <p className={activeTab === "Offer" ? "active-tab" : "" } onClick={() => setActiveTab("Offer")}>Offer</p>
+                </aside>
+              </section>
+              <section className="home-product-body">
+                {activeTab === "All" && <All/> }
+                {activeTab === "New" && <New/>}
+                {activeTab === "Featured" && <Featured/>}
+                {activeTab === "Offer" && <Offer/>}
+              </section>
             </div>
-            <div className="right-text">
-              <span>Shop By:</span>
-              <span>Featured</span>
-              <span>
-                {" "}
-                <RiArrowDropDownLine size={30} />
-              </span>
-            </div>
+            <div className="hero-3">
+        <div className="hero-3-img" style={{ display: "flex", flexDirection: "row" }} >
+          <div className="hero-3-write-up">
+            <h1>Get Our <br />
+             Latest Offers News</h1>
+            <p>Subscribe to our Newsletter</p>
           </div>
+        </div>
+        <div className="hero-3-input-container">
+           <div className="hero-3-input">
+           <input type="text" placeholder="Your email here"/>
+           <button>Shop Now</button>
+           </div>
         </div>
       </div>
-      <section className="mapped-products">
-        <div className="product-card">
-          <div className="product-img-holder">
-            <img src="" alt="" />
-          </div>
-          <div className="header-product-details">
-
-          </div>
-          <div className="product-price">
-
-          <span>$40.00</span>
-          <span className="dashed-line">$60.00</span>
-          </div>
-        </div>
-      </section>
       <Footer />
     </div>
   );

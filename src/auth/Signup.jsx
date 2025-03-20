@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../styles/signup.css'
 import { useNavigate } from 'react-router-dom'
 import Header from '../components/Header'
@@ -7,10 +7,11 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { toast } from "react-toastify";
 import axios from 'axios'
+import { GiCondyluraSkull } from 'react-icons/gi'
 
 const Signup = () => {
-
-  const [input, setInput] = React.useState({
+  const [disabled, setDisabled] = useState(false)
+  const [input, setInput] = useState({
     userName: '',
     email: '',
     password: '',
@@ -21,23 +22,46 @@ const Signup = () => {
   const handleInputs = (e) =>{
      const {value, name} = e.target
      setInput({...input, [name]: value})
+     setDisabled(input.userName && input.email && input.password && input.confirmPassword)
   }
    
   const url = 'https://colorlib.onrender.com/api/v1'
-  
-  const postDetails = async () =>{
-    try{
-      const res = await axios.post (`${url}/register`,input )
-      console.log(res)
-      toast.success(res.data.message)
-    }
-    
-    catch (error){
-         console.log(error)
-          toast.error(error.response.data.message)
-    }
-  }
 
+
+    
+
+  const postDetails = async () =>{
+    const emailRegex =  /^[^\s@]+@[^\s@]+\.[^\s@]/;
+    const passwordRegex = /^.{8,}$/;
+ if(input.userName === ''){
+       toast.error('username cannot be empty')
+    }
+    else if(input.email === ''){
+      toast.error('Email cannot be empty')
+    }
+    // else if(input.email !== emailRegex){
+    //   toast.error('Invalid email')
+    // }
+    else if (input.password === ''){
+      toast.error('Password cannot be empty')
+    }
+    else if(input.password !== passwordRegex ){
+      toast.error('Invalid password')
+      toast.error('Password must not be less than 8 characters')
+    }
+    else{
+      try{
+        const res = await axios.post (`${url}/register`,input )
+        console.log(res)
+        toast.success(res.data.message)
+      }
+      catch (error){
+           console.log(error)
+    }
+    }
+     
+  }
+  
     const navigate = useNavigate();
 
   return (
@@ -83,7 +107,13 @@ const Signup = () => {
                     onChange={handleInputs}
                     placeholder='Confirm password'/>
                 </aside>
-                <button onClick={postDetails}>Sign-Up</button>
+                <button
+                 onClick={postDetails}
+                 style={
+                 {backgroundColor :  !disabled ? '#b7bbc0' : '#2577FD'}
+                 }
+                disabled={disabled}
+                 >Sign-Up</button>
               </div>
            </div>
        </div>
