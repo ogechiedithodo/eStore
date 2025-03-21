@@ -1,5 +1,5 @@
 import React from 'react'
-import '../styles/verifyEmail.css'
+import '../styles/VerifyEmail.css'
 import { useNavigate } from 'react-router-dom'
 
 const VerifyEmail = () => {
