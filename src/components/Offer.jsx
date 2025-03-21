@@ -1,51 +1,11 @@
 import React from 'react'
 import { CiStar } from "react-icons/ci";
 import '../styles/All.css'
+import { usePost } from '../global/Context';
 
-const Offer = () => {
+const All = () => {
 
-  const allItems =[
-    {
-        image: "https://preview.colorlib.com/theme/estore/assets/img/categori/product6.png",
-        description:"Green Dress with Details",
-        price1: "$40.00",
-        tag:"New",
-        price2: "$60.00"
-    },
-    {
-        
-        image: "https://preview.colorlib.com/theme/estore/assets/img/categori/product4.png",
-        description:"Green Dress with Details",
-        price1: "$40.00",
-        price2: "$60.00"
-    },
-    {
-      image: "https://preview.colorlib.com/theme/estore/assets/img/categori/product2.png",
-        description:"Green Dress with Details",
-        tag:"New",
-        price1: "$40.00",
-        price2: "$60.00"
-    },
-    {
-        image: "https://preview.colorlib.com/theme/estore/assets/img/categori/product1.png",
-        description:"Green Dress with Details",
-        price1: "$40.00",
-        price2: "$60.00"
-    },
-    {
-        image: "https://preview.colorlib.com/theme/estore/assets/img/categori/product3.png",
-        description:"Green Dress with Details",
-        price1: "$40.00",
-        price2: "$60.00"
-    },
-    {
-        image: "https://preview.colorlib.com/theme/estore/assets/img/categori/product5.png",
-        description:"Green Dress with Details",
-        tag:"New",
-        price1: "$40.00",
-        price2: "$60.00"
-    }
-  ]
+const {allItems} = usePost()
 
   return (
     <div className='home-product-items-container'>
@@ -71,4 +31,4 @@ const Offer = () => {
   )
 }
 
-export default Offer
+export default All

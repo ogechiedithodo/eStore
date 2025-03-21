@@ -10,9 +10,11 @@ import { IoSearch } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
 import { GoHeart } from "react-icons/go";
 import { IoCart } from "react-icons/io5";
+import { usePost } from "../global/Context";
 
 const Header = () => {
   const navigate = useNavigate();
+  const {addCart} = usePost()
 
   return (
     <div className="HeaderBody">
@@ -115,7 +117,7 @@ const Header = () => {
             </div>
             <div className="heart">
               <IoCart size={20} />
-              <div className="top">02</div>
+              <div className="top">{addCart.length}</div>
             </div>
           </div>
           <div className="signin">

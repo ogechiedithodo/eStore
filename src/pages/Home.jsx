@@ -6,9 +6,11 @@ import All from "../components/All";
 import New from "../components/New";
 import Offer from "../components/Offer";
 import Featured from "../components/Featured";
+import { usePost } from "../global/Context";
 
 const Home = () => {
   const [activeTab, setActiveTab] = React.useState("All");
+
 
   return (
     <div className="home-body">

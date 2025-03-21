@@ -212,3 +212,47 @@
     background-color: whitesmoke;
     color: blue;
 }
+@media (max-width: 500px) {
+  .product-details-body{
+    width: 100%;
+
+  }
+  .product-details-hero{
+    width: 100%;
+  }
+  .product-details-img{
+    width: 100%;
+    height: 50vh;
+  }
+  .carousel-container{
+    height: 50vh;
+  }
+  .quantity{
+    width: 100%;
+    height: 100vh;
+  }
+  .quantity-container{
+width: 100%;
+height: 100%;
+  }
+  .quantity-increment{
+    width: 100%;
+  }
+  .add-button{
+    width: 100%;
+  }
+  .promotion{
+    width: 100%;
+  }
+  .promotion-container{
+    width: 100%;
+  }
+  .promotion-content{
+    width: 100%;
+    height: 100%;
+    font-size: large;
+  }
+  .promotion-input{
+    width: 90%;
+  }
+}
