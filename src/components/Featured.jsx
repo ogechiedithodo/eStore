@@ -3,9 +3,18 @@ import { CiStar } from "react-icons/ci";
 import '../styles/All.css'
 import { usePost } from '../global/Context';
 
-const All = () => {
 
-const {allItems} = usePost()
+
+
+
+import { PostProvider } from '../global/Context';
+
+const All = () => {
+    const {allItems,addToCart,addCart, removeFromCart} = usePost()
+   
+
+console.log(addCart)
+
 
   return (
     <div className='home-product-items-container'>
@@ -25,6 +34,7 @@ const {allItems} = usePost()
                     <span>{item.price1}</span>
                     <span>{item.price2}</span>
                 </div>
+                <button onClick={()=>addToCart(item)}>Add to cart</button>
             </div>
         ))}
     </div>
@@ -32,3 +42,4 @@ const {allItems} = usePost()
 }
 
 export default All
+

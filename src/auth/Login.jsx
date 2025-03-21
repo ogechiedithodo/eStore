@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "../styles/login.css";
@@ -8,7 +8,11 @@ import { toast, ToastContainer } from "react-toastify";
 
 const url = "https://colorlib.onrender.com/api/v1";
 
+
 const Login = () => {
+  
+  
+
   const navigate = useNavigate();
   const [isDisabled, setIsDisabled] = useState(false);
   const [openModal, setOpenModal] = useState(false);
@@ -179,7 +183,7 @@ const Login = () => {
       {openModal ? (
         <div className="modal" onClick={() => setOpenModal(false)}>
           <div className="modal-content">
-            <span className="close">&times;</span>
+            <span className="close">X</span>
             <h2>Forgot Password</h2>
             <p>Enter your email to reset your password:</p>
             <input

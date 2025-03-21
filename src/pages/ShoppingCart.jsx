@@ -9,12 +9,13 @@ import { RiArrowDropUpLine } from "react-icons/ri";
 import DropModal from '../components/DropModal';
 import { usePost } from '../global/Context';
 import DropModalTwo from '../components/DropModalTwo';
+import { FaTrash } from "react-icons/fa6";
 
 
 const ShoppingCart = () => {
   const { dropModal, drop, dropTwo, dropmodalTwo} = usePost();
   // const [count, setCount]=useState(1)
-  const {allProduct,addCart} = usePost()
+
 
  
   return (
@@ -37,6 +38,7 @@ const ShoppingCart = () => {
             <span>Total</span>
           </div>
         </nav>
+
 
       {
         addCart?.map((item,index)=>(
@@ -71,7 +73,7 @@ const ShoppingCart = () => {
 
 
         <article className='updateCart'>
-          <div className='updtaeCartHover'>Update Cart</div>
+          <div className='updtaeCartHover' onClick={clearCart}>Clear Cart</div>
           <div className='updtaeCartHover'>Close Cupon</div>
         </article>
       </section>

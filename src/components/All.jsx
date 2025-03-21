@@ -2,10 +2,20 @@ import React from 'react'
 import { CiStar } from "react-icons/ci";
 import '../styles/All.css'
 import { usePost } from '../global/Context';
+import { PostProvider } from '../global/Context';
+
 
 const All = () => {
+    const {allItems,addToCart,addCart, removeFromCart} = usePost()
+   
+
 
 const {allProduct,addToCart} = usePost()
+
+
+
+console.log(    addCart
+)
 
 
   return (
@@ -26,10 +36,10 @@ const {allProduct,addToCart} = usePost()
                     <span>${item.productPrice}</span>
                     <span>{}</span>
                 </div>
-                <button onClick={()=>addToCart(item)}>Add to Cart</button>
-                {/* console.log(addToCart);
-                console.log(addCart); */}
-                
+
+      
+                <button onClick={()=>addToCart(item)}>Add to cart</button>
+
             </div>
         ))}
     </div>

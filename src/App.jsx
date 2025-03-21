@@ -13,16 +13,18 @@ import VerifyEmail from "./auth/VerifyEmail";
 
 const router = createBrowserRouter([
   { path: "/", element: <Home /> },
-  { path: "/login", element: <Login/> },
+  { path: "/login/", element: <Login/> },
   { path: "/signup", element: <Signup /> },
   { path: "/checkout", element: <Checkout /> },
   { path: "/productcategory", element: <ProductCategory /> },
   { path: "/productdetails", element: <ProductDetails /> },
   { path: "/shoppingcart", element: <ShoppingCart /> },
 
+
   {path: "/verifyEmail", element:<VerifyEmail/>},
 
   {path: "/resetpassword/:token", element: <ResetPassword/>}
+
 
 ]);
 

@@ -16,6 +16,7 @@ const Header = () => {
   const navigate = useNavigate();
   const {addCart} = usePost()
 
+    const {addCart} = usePost()
   return (
     <div className="HeaderBody">
       <div className="top-header">
