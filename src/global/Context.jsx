@@ -8,25 +8,12 @@ import { useContext, useState, createContext, useEffect } from "react";
 const PostsContext = createContext();
 export const usePost = () => useContext(PostsContext);
 
-const baseUrl = 'https://colorlib.onrender.com/api/v1'
-
 
 export const PostProvider = ({ children }) => {
   const [dropmodalTwo, setDropModalTwo]= useState(false)
   const [dropModal, setDropModal]=useState(false)
   const [allPost, setAllPost] = useState([]);
   const [addCart, setAddCart] = useState([])
-
-
-
-
-
-
-
-  const addToCart = (item) => {
-    setAddCart((prevCart) => [...prevCart, item]);
-  };
-
   const removeFromCart = (item) => {
     setAddCart((prevCart) => prevCart.filter(item => item.id !== item ));
   };

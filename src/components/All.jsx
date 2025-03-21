@@ -7,17 +7,6 @@ import { PostProvider } from '../global/Context';
 
 const All = () => {
     const {allItems,addToCart,addCart, removeFromCart} = usePost()
-   
-
-
-const {allProduct,addToCart} = usePost()
-
-
-
-console.log(    addCart
-)
-
-
   return (
     <div className='home-product-items-container'>
         {allProduct?.map((item, index) => (

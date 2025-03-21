@@ -14,8 +14,6 @@ import { usePost } from "../global/Context";
 
 const Header = () => {
   const navigate = useNavigate();
-  const {addCart} = usePost()
-
     const {addCart} = usePost()
   return (
     <div className="HeaderBody">
