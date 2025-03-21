@@ -92,7 +92,6 @@ export const PostProvider = ({ children }) => {
     addToCart,
     addCart,
     removeFromCart,
-    allItems,
   };
 
 

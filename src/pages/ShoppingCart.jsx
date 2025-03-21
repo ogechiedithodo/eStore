@@ -13,7 +13,7 @@ import { FaTrash } from "react-icons/fa6";
 
 
 const ShoppingCart = () => {
-  const { dropModal, drop, dropTwo, dropmodalTwo} = usePost();
+  const { dropModal, drop, dropTwo, dropmodalTwo,addCart} = usePost();
   // const [count, setCount]=useState(1)
 
 
@@ -73,7 +73,7 @@ const ShoppingCart = () => {
 
 
         <article className='updateCart'>
-          <div className='updtaeCartHover' onClick={clearCart}>Clear Cart</div>
+          <div className='updtaeCartHover'>Clear Cart</div>
           <div className='updtaeCartHover'>Close Cupon</div>
         </article>
       </section>
