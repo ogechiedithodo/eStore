@@ -14,10 +14,10 @@ const Login = () => {
   
 
   const navigate = useNavigate();
-  const [isDisabled, setIsDisabled] = useState(false)
-  const [modal, setModal] = useState(true);
+  const [isDisabled, setIsDisabled] = useState(false);
   const [openModal, setOpenModal] = useState(false);
   const [userEmail, setUserEmail] = useState({ email: "" });
+  const [loading, setLoading] = useState(false)
   console.log(userEmail);
 
   const [logInData, setLogInData] = useState({
@@ -28,11 +28,7 @@ const Login = () => {
   const handleInputChange = (e) => {
     const { value, name } = e.target;
     setLogInData({ ...logInData, [name]: value });
-    setIsDisabled(
-      !(logInData.userName &&
-        logInData.password
-      )
-    )
+    setIsDisabled(!(logInData.userName && logInData.password));
   };
 
   const handleSubmit = () => {
@@ -58,8 +54,7 @@ const Login = () => {
       toast.error("This field can't be empty");
     } else if (!emailValidation(userEmail.email)) {
       toast.error("Invalid Email Format");
-    } 
-     else {
+    } else {
       try {
         const res = await axios.post(`${url}/forgot/password`, userEmail);
         console.log(res);
@@ -73,19 +68,21 @@ const Login = () => {
   const [errorMessage, setErrorMessage] = useState("");
   console.log(errorMessage);
   const postLogInData = async () => {
+    setLoading(true)
     if (logInData.userName === "") {
       toast.error("Username can't be empty");
     } else if (logInData.password === "") {
-      toast.error(" password Fields can't be empty!");
-    }
-    else if (!validatePassword(logInData.password)) {
+      toast.error(" Password Field can't be empty!");
+    } else if (!validatePassword(logInData.password)) {
       toast.error("Password must contain numbers and special characters");
-    }
-     else {
+    } else {
       try {
+        setLoading(true)
         const res = await axios.post(`${url}/login`, logInData);
         console.log(res);
+        setLoading(false)
         toast.success(res.data.message);
+        setLoading(false)
         navigate("/");
 
         localStorage.setItem(
@@ -94,6 +91,7 @@ const Login = () => {
         );
         console.log(res.data.token);
       } catch (error) {
+        setLoading(false)
         console.log(error);
         toast.error(error.res.data.message);
       }
@@ -158,11 +156,16 @@ const Login = () => {
                 <p>Remember me</p>
               </div>
               <div
-               className="login-btn" 
-               onClick={postLogInData}
-               disable = {isDisabled}
-               style={{background : isDisabled ? "#8b8b8b" : "#2577fe"}}>
+                className="login-btn"
+                onClick={postLogInData}
+                disable={isDisabled}
+                style={{ background: !isDisabled ? "#8b8b8b" : "#2577fe" }}
+              >
+              {
+                loading ?  
+                <span>Loading...</span>:
                 <span>LOG IN</span>
+              }
               </div>
               <div
                 className="forget-password"
@@ -178,7 +181,7 @@ const Login = () => {
       <Footer />
 
       {openModal ? (
-        <div className="modal" onClick={() => setModal(false)}>
+        <div className="modal" onClick={() => setOpenModal(false)}>
           <div className="modal-content">
             <span className="close">X</span>
             <h2>Forgot Password</h2>

@@ -199,3 +199,51 @@ button:hover {
     background-color: #0056b3;
     
 }
+@media (max-width: 500px) {
+.loginBody{
+    width: 100%;
+    }
+.login-hero{
+    width: 100%;
+} 
+.login-img{
+    width: 100%;
+    height: 50vh;
+}
+.login-body{
+    width: 100%;
+    height: 110vh;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}  
+.left-card{
+    width: 100%;
+    height: 100%;
+}
+.container{
+    width: 80%;
+    height: 80%;
+} 
+.text-container{
+    height: 80%;
+    font-size: x-large;
+}
+.button{
+    
+    & span{
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        font-size: large;
+    }
+}
+.login-card{
+    width: 100%;
+    height: 90%;
+}
+.card-header{
+    font-size:large;
+}
+    
+}

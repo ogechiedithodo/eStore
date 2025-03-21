@@ -13,21 +13,11 @@ import { FaTrash } from "react-icons/fa6";
 
 
 const ShoppingCart = () => {
-  const { dropModal, drop, dropTwo, dropmodalTwo, addCart,removeFromCart,clearCart} = usePost();
-  console.log(addCart)
-  const [count, setCount]=useState(1)
- 
+  const { dropModal, drop, dropTwo, dropmodalTwo} = usePost();
+  // const [count, setCount]=useState(1)
 
-  const increaseCount = ()=>{
-   setCount(count +1)
-  }
-  const reduceCount = ()=>{
-   if (count < 1){
-      setCount(0)
-   }else{
-    setCount(count -1)
-   }
-  }
+
+ 
   return (
     <div className='mainShoppingCart'>
       <Header />
@@ -49,39 +39,39 @@ const ShoppingCart = () => {
           </div>
         </nav>
 
-       <div style={{minHeight:'20vh',width:'100%',gap:'20px',overflowY:'auto'}}>
-       {
-            addCart?.map((item,index)=>(
-              <article className='product' key={index}>
-              <section>
-                <div style={{ width: "30%", height: "70%", backgroundColor: " #e0e0e0" }}>
-                  <img src={item.image}alt="" style={{width:"100%", height:"100%"}}/>
-                </div>
-                <div>
-                  <span style={{ color: "rgb(107, 101, 96)", fontSize: "16px", fontFamily: "sans-serif" }}>{item.description}</span>
-                </div>
-              </section>
-              <section>
-                <div style={{ width: "30%", height: "37%", fontFamily: `"Playfair Display", serif`, display: "flex", justifyContent: "center", alignItems: "center", color: "rgb(107, 101, 96)" }}>{item.price1}</div>
-                <div style={{ width: "30%", height: "60%", display: "flex", justifyContent: "center", alignItems: "center" }}>
-                  <span style={{
-                    width: "70%", height: "41%", borderRadius: "5px", border: "1px solid #e0e0e0",  alignItems: "center",  color: " #e0e0e0",
-                    display: "flex", justifyContent: "space-between",  }}>
-                      <p style={{ width: "40%", height: "100%", display: "flex", justifyContent:"center", alignItems:"center", color:"black", fontSize:"20px", fontFamily: `"Playfair Display", serif`, paddingLeft:"20px"}}>{count}</p>
-                      <article style={{ width: "40%", height: "100%", display: "flex", flexDirection: "column" }}>
-                          <div style={{ width: "100%", height: "50%", border: "0.7px solid #e0e0e0", display: "flex", justifyContent: "center", alignItems: "center", color: "black", fontSize: "20px", cursor: "pointer", }} onClick={increaseCount}>+</div>
-                          <div style={{ width: "100%", height: "50%", border: "0.7px solid #e0e0e0", display: "flex", justifyContent: "center", alignItems: "center", color: "black", fontSize: "20px", cursor: "pointer" }} onClick={reduceCount}>-</div>
-                      </article>
-                  </span>
-                </div>
-                <div style={{ width: "30%", height: "37%", fontFamily: `"Playfair Display", serif`, display: "flex", justifyContent: "center", alignItems: "center", color: "rgb(107, 101, 96)" }}>{item.price2}</div>
-              <FaTrash color='red' size={20} onClick={removeFromCart}/>
-              </section>
-            </article>
-            ))
-          }
-       </div>
-      
+
+      {
+        addCart?.map((item,index)=>(
+        <article className='product' key={index}>
+        <section>
+          <div style={{ width: "30%", height: "70%", backgroundColor: " #e0e0e0" }}>
+            <img src={item.image.imageUrl} alt="" style={{width:"100%", height:"100%"}} />
+          </div>
+          <div>
+            <span style={{ color: "rgb(107, 101, 96)", fontSize: "16px", fontFamily: "sans-serif" }}>{item.productName}</span>
+          </div>
+        </section>
+        <section>
+          <div style={{ width: "30%", height: "37%", fontFamily: `"Playfair Display", serif`, display: "flex", justifyContent: "center", alignItems: "center", color: "rgb(107, 101, 96)" }}>{item.productPrice}</div>
+          <div style={{ width: "30%", height: "60%", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <span style={{
+              width: "70%", height: "41%", borderRadius: "5px", border: "1px solid #e0e0e0",  alignItems: "center",  color: " #e0e0e0",
+              display: "flex", justifyContent: "space-between",  }}>
+                <p style={{ width: "40%", height: "100%", display: "flex", justifyContent:"center", alignItems:"center", color:"black", fontSize:"20px", fontFamily: `"Playfair Display", serif`, paddingLeft:"20px"}}>{item.quantity}</p>
+                <article style={{ width: "40%", height: "100%", display: "flex", flexDirection: "column" }}>
+                    <div style={{ width: "100%", height: "50%", border: "0.7px solid #e0e0e0", display: "flex", justifyContent: "center", alignItems: "center", color: "black", fontSize: "20px", cursor: "pointer", }} onClick=''>+</div>
+                    <div style={{ width: "100%", height: "50%", border: "0.7px solid #e0e0e0", display: "flex", justifyContent: "center", alignItems: "center", color: "black", fontSize: "20px", cursor: "pointer" }} onClick=''>-</div>
+                </article>
+            </span>
+          </div>
+          <div style={{ width: "30%", height: "37%", fontFamily: `"Playfair Display", serif`, display: "flex", justifyContent: "center", alignItems: "center", color: "rgb(107, 101, 96)" }}> $720.00</div>
+        </section>
+      </article>
+
+        ))
+      }
+
+
         <article className='updateCart'>
           <div className='updtaeCartHover' onClick={clearCart}>Clear Cart</div>
           <div className='updtaeCartHover'>Close Cupon</div>

@@ -255,3 +255,8 @@
 a.active{
   color: rgba(255, 0, 0, 0.612);
 }
+@media (max-width:500px) {
+  .HeaderBody{
+    display: none;
+  }
+}
