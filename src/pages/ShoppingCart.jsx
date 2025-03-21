@@ -39,8 +39,12 @@ const ShoppingCart = () => {
           </div>
         </nav>
 
-
-      {
+<div className='productBoxDiv'>
+{
+  addCart.length === 0 ?
+<h3 style={{display:"flex", justifyContent:"center", alignItems:"center",paddingTop:"30px"}}><b> No Item on Your Cart</b></h3>:
+<>
+{
         addCart?.map((item,index)=>(
         <article className='product' key={index}>
         <section>
@@ -65,11 +69,16 @@ const ShoppingCart = () => {
             </span>
           </div>
           <div style={{ width: "30%", height: "37%", fontFamily: `"Playfair Display", serif`, display: "flex", justifyContent: "center", alignItems: "center", color: "rgb(107, 101, 96)" }}> $720.00</div>
+          <FaTrash color='red'/>
         </section>
       </article>
 
         ))
       }
+</>
+}
+</div>
+ 
 
 
         <article className='updateCart'>
