@@ -13,6 +13,7 @@ const Home = () => {
   return (
     <div className="home-body">
       <Header />
+      
       <div className="hero-1">
         <div className="empty-div"></div>
         <div className="her0-1-write-up">

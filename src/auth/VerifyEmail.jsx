@@ -1,36 +1,16 @@
-import axios from 'axios'
 import React from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
-import { toast, ToastContainer } from 'react-toastify'
+import '../styles/verifyEmail.css'
+import { useNavigate } from 'react-router-dom'
 
 const VerifyEmail = () => {
-
-  const {tokens} = useParams()
   const navigate = useNavigate()
-   
-  console.log(tokens)
-
-  const url = 'https://colorlib.onrender.com/api/v1/verify/user/'
-  
-  const handleVerify = async () =>{
-      try {
-        const res =  await axios.get(`${url}${tokens}`)
-        console.log(res)
-        toast.success('verified successfully')
-        setTimeout(() => navigate('/login'), 3000);
-      } catch (error) {
-        console.log(error)
-        toast
-      }
-  }
-
-
   return (
-    
-    <div>
-      <ToastContainer/>,
-      <button onClick={handleVerify}>Verify Email</button>
-    </div>
+    <div className='verifyEmailWrapper'>
+    <div className='verifyEmail'>
+  <p style={{fontSize:'20px', fontFamily:'sans-serif', }}>check email for verification link</p>
+  <button onClick={()=>navigate('/login')}>Click to login  after verification</button>
+   </div>
+</div>
   )
 }
 
