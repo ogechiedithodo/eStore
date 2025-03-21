@@ -7,10 +7,11 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { toast } from "react-toastify";
 import axios from 'axios'
-import { GiCondyluraSkull } from 'react-icons/gi'
+
 
 const Signup = () => {
   const [disabled, setDisabled] = useState(false)
+  const [loading, setLoading] = useState(false)
   const [input, setInput] = useState({
     userName: '',
     email: '',
@@ -40,6 +41,7 @@ const Signup = () => {
   const postDetails = async () =>{
     const emailRegex =  /^[^\s@]+@[^\s@]+\.[^\s@]/;
     const passwordRegex = /^.{8,}$/;
+    setLoading(true)
  if(input.userName === ''){
        toast.error('username cannot be empty')
     }
@@ -61,13 +63,16 @@ const Signup = () => {
     }
     else{
       try{
-        const res = await axios.post (`${url}/register`,input )
+        const res = await axios.post(`${url}/register`,input)
         console.log(res)
         navigate('/verifyEmail')
         toast.success(res.data.message)
+        setLoading(false)
       }
       catch (error){
+           setLoading(false)
            console.log(error)
+          
     }
     }
      
@@ -91,7 +96,7 @@ const Signup = () => {
                 <p onClick={()=> navigate("/login")}>Sign-in</p>
               </div>
               <div>
-                <h2>Welcome !<br />please Log in Now </h2>
+                <h2>Welcome !<br />Sign-up here </h2>
                 <aside>
                    <input
                     name='userName'
@@ -118,14 +123,13 @@ const Signup = () => {
                     onChange={handleInputs}
                     placeholder='Confirm password'/>
                 </aside>
-                <button
-                 onClick={postDetails}
+                <button onClick={postDetails}
                  style={
-                 {backgroundColor :  !disabled ? '#2577FD' : '#b7bbc0'}
+                 {backgroundColor :  !disabled ? ' #b7bbc0' : ' #2577FD'}
                  }
                 disabled={!disabled}
 
-                 >Sign-Up</button>
+                 >{loading ? <span>Loading</span>: <span>Sign-Up</span>}</button>
               </div>
            </div>
        </div>
